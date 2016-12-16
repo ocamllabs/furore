@@ -13,5 +13,5 @@ cd output
 git init
 git add *
 git commit -m sync -a
-git remote add git@github.com:ocamllabs/furore
+git remote add origin git@github.com:ocamllabs/furore
 git push origin +gh-pages
