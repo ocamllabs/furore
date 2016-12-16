@@ -7,7 +7,7 @@ ssh-add furore_id_rsa
 docker pull ocamllabs/furore
 rm -rf output
 mkdir output
-docker run -v `pwd`:/mnt ocamllabs/furore pandoc -f markdown intro.md -o output/report.pdf
+docker run -w /mnt -v `pwd`:/mnt ocamllabs/furore pandoc -f markdown intro.md -o output/report.pdf
 
 cd output
 git init
