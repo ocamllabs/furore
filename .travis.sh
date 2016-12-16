@@ -5,9 +5,8 @@ chmod 600 furore_id_rsa
 ssh-add furore_id_rsa
 
 docker pull ocamllabs/furore
-rm -rf output
-mkdir output
-docker run -w /mnt -v `pwd`:/mnt ocamllabs/furore pandoc -f markdown intro.md -o output/report.pdf
+docker run -w /mnt -v `pwd`:/mnt ocamllabs/furore pandoc --toc -f markdown intro.md -o output/report.pdf
+docker run -w /mnt -v `pwd`:/mnt ocamllabs/furore pandoc --toc -f markdown intro.md -t html5 -css github-pandoc.css -o output/index.html
 
 cd output
 git init
