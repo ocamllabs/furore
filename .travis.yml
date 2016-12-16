@@ -5,4 +5,4 @@ services:
 sudo: false
 before_install:
 - openssl aes-256-cbc -K $encrypted_5899a0a28dc8_key -iv $encrypted_5899a0a28dc8_iv
-  -in furore_id_rsa.enc -out ~\/.ssh/furore_id_rsa -d
+  -in furore_id_rsa.enc -out furore_id_rsa -d
