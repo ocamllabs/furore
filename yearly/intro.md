@@ -1,7 +1,7 @@
 ---
-title: OCaml Labs Annual Reviews
+title: OCaml Labs Annual Reviews (2011-2014)
 author: Anil Madhavapeddy, Gemma Gordon, KC Sivaramakrishnan
-rights:  Creative Commons Non-Commercial Share Alike 3.0
+rights: CC BY-SA 4.0
 language: en-US
 ---
 
