@@ -232,6 +232,11 @@ img {
     border: 0;
 }
 
+img.floater {
+    float: right;
+    width: 40%;
+}
+
 /**
  * Correct overflow displayed oddly in IE 9.
  */
@@ -249,7 +254,15 @@ svg:not(:root) {
  */
 
 figure {
-    margin: 0;
+  float: right;
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  border: thin silver solid;
+  margin: 0.5em;
+  padding: 0.5em;
 }
 
 /* ==========================================================================

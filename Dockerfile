@@ -1,4 +1,4 @@
-FROM debian
+FROM ubuntu:xenial
 RUN apt-get update
 RUN apt-get -y install pandoc 
 #RUN apt-get -y texlive texlive-xetex texlive-fonts-extra
