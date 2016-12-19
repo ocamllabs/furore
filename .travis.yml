@@ -1,5 +1,8 @@
 language: c
 script: bash -ex .travis.sh
+deploy:
+  provider: script
+  script: ./.travis-deploy.sh
 services:
 - docker
 sudo: false
