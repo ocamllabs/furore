@@ -1,6 +1,6 @@
 language: c
 script:
-- bash -ex scripts/travis.sh
+- bash -ex scripts/build.sh
 - bash -ex scripts/deploy.sh
 services:
 - docker
