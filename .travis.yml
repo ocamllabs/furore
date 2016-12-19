@@ -1,13 +1,13 @@
 language: c
 script:
-- bash -ex .travis.sh
-- bash -ex .travis-deploy.sh
+- bash -ex scripts/travis.sh
+- bash -ex scripts/deploy.sh
 services:
 - docker
 sudo: false
 before_install:
 - openssl aes-256-cbc -K $encrypted_5899a0a28dc8_key -iv $encrypted_5899a0a28dc8_iv
-  -in furore_id_rsa.enc -out furore_id_rsa -d
+  -in scripts/furore_id_rsa.enc -out furore_id_rsa -d
 notifications:
   slack:
     secure: Wj2wu1IvZlzSPlbHXZvzXKe/vAWBkZEkQQ5723GoNFgXns21RBolOwPpILpE2dSCryumQAUGHJ87ZJbgCTmXWXmfzWD3ez6o9tFDmxSkNt5MUAnIox/e8QCCzkCHM12SYcKtIp3DEvc0Ox9BJmKm59NkSmc0bhISGwMDHoAWJu6qvgopzMzWC7L/EmYgcRHDQjhn5T959c9juKgfnltb4W+H1FjBVqOTY+QjK/VaPZHJj6SkNLgzzPlPVmbyXB8oaMYy3gHdsygf3mncaeIo5ujGINxS17rf9KBKbnLbiQgbhnYE78tFXgjKY4sJFkASs6L5YXOrKGxd+ve83ehzHJnamFEEqKJdzQkd5j4qFzb4Oxs3B95H6nifU+pj9Mr9Y9jfI8zdB4HzUVLW+Gy3o76mM9As+qf2+Rfwq1p0EC1KBC7pefH4Em1CC8NkMxz23l5Pagw+jgpJhPppccc9I92W1OQhvhxp/NJN+lXgCazaMF6oA57DkCWaWP9gsJu5BzGFKBcVQETLKRt6A23pc/Kx1jQ/PWC3bubyA1bX6KcDtPP2ar40Q3cWDC9+i4XPLNJTnuJoKSP6bHHUaU1wVssnsuCpCdzYkqWX+TE06/Karz4v/GyV51+5G8dA8GDd2ChPlwaU3z+udcvFLH4WUk6v3AN2j/4n/fO7iqQy0BI=
