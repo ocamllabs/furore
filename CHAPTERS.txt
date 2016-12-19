@@ -1,0 +1,10 @@
+content/intro.md
+content/ocaml-core-system.md
+content/platform.md
+content/multicore.md
+content/mirageos.md
+content/community-and-outreach.md
+content/collaborations.md
+content/publications.md
+content/2017-focus.md
+content/ack.md
