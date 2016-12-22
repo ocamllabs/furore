@@ -36,3 +36,35 @@ In parallel to this I have been working on a typed CPS translation for the simpl
 Given the time it took us to convince ourselves that the translation makes sense we chose to focus on finding a typed cps translation for effects. The plan is to find a class of programs for which the cps translation can be typed with simpler types and extend the typed cps translation in OCaml which would be a convincing argument that the translation is correct through the type constraints and extensive testing. Then we can either try to reintroduce some features to the type and effect system and try to handle them or move back to the implementation of the selective CPS transform.
 
 We would like to work in a strongly normalizing calculus and give a simple correspondence between the type of a term and its CPS translation. Deep handlers with the current type and effect system can introduce type and term level recursion so a first attempt would probably involve shallow handlers. We can then recover the expressivity of deep handlers with term-level recursion.
+
+----
+
+## Owl (Liang)
+
+* Optimsations of modules:
+- sparse complex matrix module
+- Fast Fourier Transforms
+- Potential for a topic module - working together with Ben Caterall who is working on it for his Part II project.
+
+* First version of Owl released via OPAM and included in MirageOS documentation.
+* Implemented a simple LDA model for Owl
+
+Meetings with Owl users and identified potential directions to focus on before the end of the year:
+- advanced support for multi-dimensional array
+- auto gradient derivation functions
+
+[Blog post](https://github.com/ryanrhymes/owl/wiki/Manipulate-Matrices-in-Owl) on how to use Owl to manipulate matrices.
+
+----
+
+## Distributed Data Processing Framework (Liang)
+
+* Wrote a peer-to-peer model parallel engine and data parallel engine, then wrapped them in a separate core module
+  - the p2p model turned out to be more complicated that the map reduce and parameter server models.
+* Implemented a stochastic gradient decedent algorithm using the model parallel engine
+* Investigated and implemented an Latent Dirichelet Analysis (LDA) model on top of the P2P engine (after much debugging!)
+* Implemented a simple DHT for the framework
+
+Established two interesting directions for research questions related to the data framework:
+- Barrier control
+- Model consistency
