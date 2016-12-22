@@ -1,4 +1,4 @@
-We decided to ask our interns to keep a raw worklog/summary of their work each week to make it easier to see and gauge progress. Now all members of the group can see the status of a project, and we can generate monthly project summaries.
+We ask our interns to keep a raw worklog/summary of their work each week to make it easier to see and gauge progress. Now all members of the group can see the status of a project, and we can generate monthly project summaries.
 
 ## Week 16: April 18th-April 24th
 
@@ -237,7 +237,7 @@ Limitations:
       << Pervasives.( * ) $x $(power' (pred n) x) >>
 
   (* val power' : int -> int expr -> int expr = <fun> *)
- 
+
 
   static power n =
 
@@ -344,7 +344,7 @@ My time this week has been split between converting a black--scholes C implement
 * Redaction of a report about macros to motivate a second, 6-month internship, starting in September.
 
 ### Philip
-Our perforation system is ready for inital testing so this week I've mostly worked on running experiments. I translated a swaptions program into OCaml. A lot of time was spent fixing bugs in the translation but once everything was set up I ran it through our loop perforation system and have some initial results.
+Our perforation system is ready for initial testing so this week I've mostly worked on running experiments. I translated a swaptions program into OCaml. A lot of time was spent fixing bugs in the translation but once everything was set up I ran it through our loop perforation system and have some initial results.
 
 We haven't quite reproduced the results from the C perforation system in the paper I'm referring to. They show results where a 5x speedup is achieved with only a 1% loss in accuracy. Our system can only produce a 1.2x speedup while losing 5% accuracy. We can get to 2x speedup but we have to sacrifice 40% accuracy. We do not perform the same state space searching as the paper version does so when that is all set up we may be able to reproduce the results.
 
@@ -396,7 +396,7 @@ Lexing and Parsing
 - Read the chapter about parsing in RWO and managed to get the very basics working.
 
 **Thursday**  
- 
+
 IOCaml and Hydrogen
 - Setting up Hydrogen for Atom as explained on the website. Working with python (although requires running atom via terminal), need to get working with IOCaml. Installed OCaml support for atom using apm install language-ocaml.
 - Doesn't work on 4.03 for some reason, requires < 4.03.0. Switching to 4.02.3. (Later on - after updating opam I can install on 4.03)
@@ -444,8 +444,8 @@ Sedlex
 - Messed around with lexing a bit more, got parsing working as well using Menhir. Requires using MenhirLib.Convert API as Menhir is made to work with ocamllex.
 
 ### Joel
-**Tuesday** 
- 
+**Tuesday**
+
 Tried installing OPAM and OCaml etc on Windows:
 
 Follow the instructions on https://github.com/protz/ocaml-installer/wiki, up to the final Sanity Check
@@ -458,8 +458,8 @@ I also read at the beginning of the article that Core is unsupported on Windows.
 
 opam install'd core utop on Ubuntu. Initially had some issues with an older version but fixed them.
 
-**Wednesday** 
- 
+**Wednesday**
+
 Begin by installing the next list of packages. During the process I get one
 
  `Building conf-zlib.1:
@@ -479,8 +479,8 @@ And it only took two whole days!
 
 Later, we get to Docker, where I continue getting through Real World OCaml and receive a licence key for Windows 10 Professional - thanks Dr. Titmus.
 
-**Thursday** 
- 
+**Thursday**
+
 I begin the day by attempting the Windows 10 Pro upgrade three times in a row, using the official channels. Frustratingly, each time, after the restart, it appears as if nothing has happened. I'm still on Home. Maybe it would be better after all to just get a computer at Docker and the CL.
 
 I talk to Graham Titmus and download the Win10 Multiple Editions ISO from DreamSpark. It tells me I'll need to burn it to a boot disk, so I go back to Titmus' office to ask - he isn't there, so after a while I go back and e-mail him, continuing with R.W.O in the meantime.
@@ -537,9 +537,14 @@ Googled, performed some magic, got it to work.
 
 Continuing with RWO, this time much faster and more productively since I now have something to type into.
 
-**Friday** 
- 
+**Friday**
+
 Just did RWO today, finally, was nice - got through several chapters, now up to chapter 8 (Imperative programming).
+
+### Philip
+This week I have generalized the perforation system to the point where I was able to take an off-the-shelf ocaml implementation of kmeans clustering and run it through the perforation system. The program was able to produce nice, readable results for different configurations [attached image]. However when more than 2 loops are perforated, the data starts becoming very hard to visualize. The system is really smooth but it's still lacking: I had to turn one use of List.iter into a for loop. However, I have created a plan to perforate recursive functions which will allow the system to work on programs which don't use for loops.
+
+This week I also worked with the reagents library for ocaml-multicore. In the beginning of the week I parallelized an existing ray tracer written in OCaml. (The ray tracer also is a good candidate for perforation.) Further, KC and I have discussed working on a lock-free hash table implementation to use in the Hack type checker (written in OCaml). Currently hack use a C hash table implementation strapped on the to OCaml code. Writing a competitive implementation in OCaml would be a great way to show of ocaml-multicore.
 
 ## Week 28: July 11th-July 17th
 
@@ -586,7 +591,7 @@ The datakit project is under KC's guidance. The idea is to use datakit to power 
 
 ### Ciaran
 **Monday**
-  
+
 IOCaml on 4.03
 - Requires ctyptes. ctypes fails due to requiring libffi. There is a message about needing to brew install libffi but I missed it at first. Installed after that.
 - Forked and cloned iocaml, followed wiki post on iocaml github to create kernelspec for jupyter:
@@ -656,8 +661,8 @@ Shell for ocaml-9p or datakit
 - Notty also doesn't appear to clean up the terminal after ctrl + c, leaves mouse interaction on etc. And ctrl c can't be intercepted.
 
 ### Joel
-**Monday** 
- 
+**Monday**
+
 Setting up Angstrom: I follow the readme instructions, ignoring the initial opam install as the package is not yet released.
 
  `opam pin add -n angstrom .
@@ -679,16 +684,16 @@ Messing around with versions settles on alcotest.0.4.1 as one that works. I run 
 
 Spent the rest of the day surveying Angstrom, OCaml internals and practising more Vim.
 
-**Tuesday** 
- 
+**Tuesday**
+
 Wrote simple test parser for balanced parentheses using Angstrom. Went surprisingly smoothly - my previous experimentation with parser combinators and monads earlier in the year has clearly paid off.
 
 Wrote initial version of ANSIparse - first test results in out-of-memory from infinite loop somewhere. !!
 
 Rewrote the grammar and the code, still need to rewrite testing code and do the tests.
 
-**Wednesday** 
- 
+**Wednesday**
+
 Continued rewrite a few times. Became apparent during testing that I had misread the format codes and fixed that. Got a working parser from string -> (style list * string) list, eg
 
 ~~~
@@ -704,8 +709,8 @@ to
 
 Now I need to work on the structuring, i.e. converting to HTML. There is already implicit structure; (styles, str) :: rest applies styles in order to str AND, implicitly, rest. However, the presence of Reset turns things off. I wonder how useful it would be to try and extract some tree structure from this data by e.g. matching styles and Resets.
 
-**Thursday** 
- 
+**Thursday**
+
 Today, worked on making the parser incremental, in that it works a line at a time given its intended use. Ran into some more unpleasant infinite-loop bugs; one of which was of the form
 
 ~~~
@@ -720,9 +725,24 @@ Items --> Item* --> Text* --> Text Text* --> "HELLO" "", or "HELLO" "" "", etc..
 
 So I had to add lookahead whereby the parser for Text fails if it will read the empty string (because it's at the end of input).
 
-**Friday** 
- 
+**Friday**
+
 Split into concrete (text) and abstract (tree) modules for later use. Had a look at TyXml.
+
+### Philip
+This week I split my time under two projects: the continuing of my
+auto perforator and the datakit project.
+
+The auto perforator is coming along very nicely. There is now a
+hill climbing algorithm built in which will explore the perforation
+state space. I have the system working under 3 domains: swaptions,
+ray tracer, and kmeans. I will give a talk about the system next
+Tuesday.
+
+The datakit project is under KC's guidance. The idea is to use
+datakit to power a distributed key-value store. The implementation
+would be a domain for testing systems which adapt to byzantine
+errors by changing the strength of their reads into the database.
 
 ## Week 29: July 18th-July 24th
 
@@ -798,6 +818,34 @@ This week I've also discussed with KC at lengths about a use-case of approximate
 
 **Friday**
 - Got most things working together today, commands now work properly. Still haven't actually got the actual interface working yet though...
+
+### Philip
+Automatic perforation is coming to the point where it could be
+ready for more users. I have slowly started to focus on providing a
+good user interface.
+
+This week I ran my auto perforation tool on two sets of inputs for
+kmeans with the goal of showing that results from a run of the
+automatic perforation program can be used to approximate further
+inputs. That is, running kmeans with the automatic perforator gives
+you a result on how to best perforate your loops. Using this result
+with future data sets previously unseen gives you just as good
+results. For this experiment I trained the perforation using 10
+inputs with 100,000 points. I then ran the resulting perforated
+program on 10 other inputs of 1,000,000 points and achieved very
+similar results (a 5x speedup with only a 10% loss in accuracy).
+
+This week I've written a blog post about the troubles with writing
+generic approximate computing frameworks (found at:
+http://phfilip.com/the-difficulty-in-a-general-approximate-computing-framework.html)
+
+This week I've also discussed with KC at lengths about a use-case
+of approximate computing. The general idea is to add approximate
+reasoning to programs which work over distributed key-value stores.
+Programs in this domain are usually already written to handle
+consistency anomalies. The addition of a dynamic system to track
+and handle the levels of approximation could be a good fit for my
+approximate computing work.
 
 ## Week 30: July 25th-July 31st
 
@@ -1477,7 +1525,7 @@ signatured opens (https://github.com/ocamllabs/compiler-hacking/wiki/Things-to-w
 
 ### Olivier
 **Compiler**
-  
+
 * The compiler "without placeholders" (and thus without useless static
   dependencies) now broadly works, i.e. I was able to bootstrap (necessary
   because adding an argument to one constructor of `Path.t` changed the cmi
@@ -1499,7 +1547,7 @@ signatured opens (https://github.com/ocamllabs/compiler-hacking/wiki/Things-to-w
 
 **Examples using macros**  
 * I try to make a fork of camlp4 compile again, but I encountered a bug that
-  wasn't caught by the tests. 
+  wasn't caught by the tests.
 * A segfault occurs when running static code for the main source file of camlp4.
   Investigating on the issue.
 * Started to look at the Flick network DSL, and its OCaml implementation Motto,
