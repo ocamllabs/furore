@@ -1400,8 +1400,65 @@ Some more work on prediction. Refactoring and separating out modules.
   merit to demonstrate the tractability of macros, since no problem related to
   the macro system arose during development.
 
+### Liang
+This week I have been working on the Plot module in Owl library by adding more basic plotting functions. Currently the Plot module supports many widely used plots. There are still many minor things in the module can be improved, but I will do that slowly in the future. I also wrote a tutorial on how to use the plot module and sent it to the ocamllabs mailing list.
+
+Besides the Plot module, I am also focusing on the Stats module because GSL only provides very basic ones and there are many useful statistical functions are missing. I will implement most of them by myself in OCaml since I do not want to introduce too many dependency in the library. So far, I have implemented z-test, t-test, jb-test, chi2-test, and so on. Based on the feedback, it becomes clearer now that Owl will evolve into a numerical library for OCaml and Matrix, Maths, Stats, Regression, and Plot will be the core modules.
+
 ## Week 43: October 24th-October 30th
+
+### Liang
+For this week, I have been doing the following things:
+
+I have implemented complex number support in Owl. The Dense module now have two submodules: Real and Complex which support dense matrices of real number and complex number respectively.
+
+I also split the current Sparse module into two parts to support both real and complex sparse matrices. The real number is already supported but the complex number support in Sparse module is still missing.
+
+I removed the dependency on Ctypes.Foreign module in Owl and change completely to stub generation as suggested by Yallop. So the interface to GSL is supposed to be faster and type safer.
+
+I tested using functor to generalise some matrix operation, it worked fine but caused some performance penalty in certain operations that I am still trying to figure out the reason.
+
+I gave a pitch of my kvasir project last night in Petershouse last night, since it entered into Cambridge Enterprise Business Plan competition. However, I didn’t win the first prize in the end but nice experience and received a lot of publicity.
+
+### Taka
+My research topic
+
+Started learning OCaml, and finished installation of OCaml on my laptop.
+Completed the chapter 1 of Real World OCaml and now following the chapter 2
+Felt I need to have a flexible mind to understand the OCaml language expression.
+Others
+
+Arrived at Cambridge 16th Oct.
+Found my long term flat and I will make a contract with a landload in this weekend.
+Still setting up IT services (e-mail address, lab network, printer/scanner).
+
+### Qi
+Here is the working log for my last week : )
+
+Measure the performance of PIH-gatekeeper(infrastructure within UCN), mainly the operation latency when serving clients' requests. As there are different branches based on the validity of client certificate and/or the right to access a data holding unikernel, accordingly there are different scenarios where the PIH-gatekeeper need to be measured against.
+
+As mort successfully updated the dom0 OS from Debian-based to Alpine earlier last week, I started to port the system to the new platform. The out-of-box SDcard image has insufficient storage space assigned for dom0, I can't install required tools/libraries in it, then I started to rebuild one image which has larger persistent storage space.
+
 ## Week 44: October 31st-November 6th
+
+### Liang
+For this week, I have be working on the following things.
+
+I have optimised the performance of sparse complex matrix module. Many operations are much faster than before now. I think this module is mostly done.
+
+I have implemented a module for Fast Fourier Transforms with basic operations. I still need some time to finalise this module next week.
+
+I start writing up some documents to prepare for an opam release in the following weeks.
+
+I start allocating more time on the distributed data processing framework again this week. The progress on this was slow due to the distraction from Owl.
+
+### Taka
+What I have done in the recent weeks is as follows;
+
+Finish reading (and testing codes in) Real World OCaml which will be related to my research topic
+Investigated how MirageOS boots up on Xen by reading the MirageOS and mini-os source codes, and understood how OCaml based modules and the mini-os part in MirageOS interact
+Started reading papers, documents, and source codes of Netmap and DPDK networking frameworks to consider how I can taking advantages of them in implementing my network acceleration feature on MirageOS.
+
 ## Week 45: November 7th-November 13th
 
 ### Olivier
@@ -1421,6 +1478,26 @@ signatured opens (https://github.com/ocamllabs/compiler-hacking/wiki/Things-to-w
 : Add support (parser and typechecker) for macros in signatures.
 * Friday  
 : Add a closure argument to macros, yet unused.
+
+### Liang
+For this week, I have been working on the following things:
+
+I realised the first version of Owl to OPAM with the help of others, also included it in the MirageOS documentation.
+
+I started shifting more efforts back to the distributed data processing framework. I rewrote the part of the data parallel and model parallel engine and wrapped them into a separate core module. On top of that, I implemented the one stochastic gradient decedent algorithm using model parallel engine.
+
+I have been investigating the Latent Dirichelet Analysis model and identified some potential research questions. Me and mort met the student (Ben Caterall) who will work with on his part III project. He will also contribute to Owl.
+
+I also implemented a simple LDA model using Owl, I hope Ben and me together can make a topic module for Owl.
+
+### Qi
+For the last week:
+
+Working with sys-admin to set up the PIH service to our external collaborators.
+
+Bumping into some bug in the MirageOS TCP/IP stack, only until yesterday did I be able to locate it , will try to fix it and issue a PR on github later
+
+Continuing porting some services to Alpine based system. For now, the service accessible to the partners are running on a Debian based system. The binaries for unikernels were easy to deal with, but there are some parts need some dynamically linked libraries, I tried different ways: statically link these libraries; porting these parts together with the libraries; altering the unikernel's implementation to get rid of these parts. For now, I'm settling with the last solution, but I think I would try the porting with libraries later, case the bug in "2" made me think that solution wouldn't work initially. Since I'm not very familiar with the building tools (especially with the linking phase), I think the first solution will cause me more time.
 
 ## Week 46: November 14th-November 20th
 
@@ -1500,7 +1577,66 @@ signatured opens (https://github.com/ocamllabs/compiler-hacking/wiki/Things-to-w
   Banned quoting from outside of macros and splices. As a direct consequence,
   turned `Expr.of_*` functions into macros.
 
+### Liang
+For this week, I have been focusing on the development of the data processing framework. I have done the following things:
+
+I implemented a very simple DHT for the framework.
+
+I finished the first version of peer-to-peer model parallel engine, on top of which I also implemented a SGD algorithm.
+
+Besides these, not much, the P2P model turned out to be much more complicated than the map reduce and parameter server models. Currently, I am focusing on the barrier control implementation in the framework.
+
+### Taka
+I send my worklogs this week;
+
+Made a list of functionality in existing networking software and hardware for virtualised environments.
+-> both Netmap and DPDK have a similar approach (software-based packet switching, userspace packet processing)
+-> using SR-IOV VFs is difficult to apply to some situations (for example, combined with DPDK on ARM)
+So I will conduct performance evaluation of the current implementation to understand which part is a bottleneck
+
+Preparing for the performance evaluation for the coming MirageOS v3 release
+-> I will be engaged in network related topics.
+-> I have started building a MirageOS/Solo5 testbed (in Japan) to easily move to the actual evaluation in a local environment. I will learn and test Mirage-related operations on the testbed in advance.
+
+### Qi
+For last week:
+
+Finished porting to the Alpine system, now our PIH system is running on Alpine based cubeietruck full time. This involved putting the data persistence service and web interface for the end user into a debian-based domU.
+
+Figured out and fixed various bug (well, at least temporarily), mainly about PIH-bridge. This part works like a Network Address Translation device, which is doing traffic relays between clients and data holding unikernels. It will keep using up its own port numbers on its network interfaces if there is no proper "garbage collection" for the port numbers. This bit became a problem when our collaborators started testing there demos against our PIH, where lots of connections would be involved. Indeed, to make it more robust, we have to address this problem. For the time being, each translation rule has its own lifetime(5 min for now), and a queue is maintained in memory to hold these rules, once
+
 ## Week 47: November 21st-November 27th
+
+### Liang
+For this week, I have done the following things.
+
+I kept working on the P2P engine, and I implemented a distributed LDA atop of P2P engine in my data processing framework. I spent about two days in debugging it and finally managed to make it work.
+
+I had a meeting with Mort to refine our thinking on the data framework and identified a couple of interesting research questions: barrier control, and model consistency.
+
+I had a couple of meetings with those who are interested in owl and identified some potential directions: more advanced support for multi-dimensional array, and auto gradient derivation functions. I will focus on these two and try to get them ready by the end of this year.
+
+I wrote a separate post for using owl to manipulate matrices, in case you didn’t notice before, here is the link: https://github.com/ryanrhymes/owl/wiki/Manipulate-Matrices-in-Owl
+
+### Taka
+Completed building my MirageOS/Solo5 environments in Japan
+
+they are operating perfectly.
+Investigating and trying to execute existing network programs on MirageOS
+
+found arp and iperf implementation, but found out they cannot use with the latest MirageOS branch (mirage-dev) due to rapidly changing MirageOS APIs
+modifying their source codes:
+arp : modification finished and worked correctly
+iperf: under modification, network connection and data transfer were OK but a result printing part was wrong
+I will move to learning of performance profiling on MirageOS after finishing the iperf modification.
+
+### Qi
+Magnus is interesting in spending a day a week contributing to the MirageOS and DataBox efforts, specifically around the work he has already done on Jitsu, ARM and networking. He will spend Wednesdays in the Lab around the standup time and work with Qi on the new Alpine xen-arm-builder distribution, to get it up to speed. He is also working on mirage-vnetif and testing of the network stack.
+
+Before Wednesday, run the system prepared for UCN final review to make sure it works, worked out the serial output from cubie so that without a vga screen we could still have a prompt to do the work, made SD card copies
+
+From Wednesday on, in Portugal, for the UCN final review, discovered that both the original card and the copy were corrupted because of some last second invalid writes crossing partition boundaries on the card, panicked, put up something mimicking the behaviour of PIH to make sure our partners' demos could still run, since in the schedule, we wouldn't demo anything, it's just our collaborators using our platforms, then the review seemed going well...
+
 ## Week 48: November 28th-December 4th
 
 ### Olivier
@@ -1520,6 +1656,20 @@ signatured opens (https://github.com/ocamllabs/compiler-hacking/wiki/Things-to-w
   `CamlinternalQuote.Var.t` to macros, instead of the current `Longident.t loc`.
 * Note for later: rename `CamlinternalQuote.Ident` to
   `CamlinternalQuote.Global` and move `lfrommacro` to `Exp`.
+
+### Liang
+Sorry for the late email this time, I was travelling on Friday. For the last week, I had been only focusing on the N-dimensional array in Owl.
+
+I implemented the first version of N-dimensional array, atop of which, I also implemented a N-dimensional view module which can pipeline some operations on the array to speed up the performance.
+
+I later find a better way to further optimise the performance of ndarray by using blas/lapack library. I am currently rewriting some code for better performance.
+
+### Taka
+Preparing for the network performance evaluation -> finished the iperf modification, now iperf can be conducted between independent MirageOS VMs -> finished investigation of performance profiling schemes for MirageOS/Solo5
+tested mirage-trace-viewer and it worked fine
+investigated Xen and QEMU/KVM tracing facilities, and confirmed they can provide what I want to know (I will try them later) https://blog.xenproject.org/2012/09/27/tracing-with-xentrace-and-xenalyze/ http://www.linux-kvm.org/page/Perf_events http://vmsplice.net/~stefan/stefanha-tracing-summit-2014.pdf -> Started implementing an automation framework of the network performance evaluation
+Completed rough implementation design and checking other software required
+I will implement it next week
 
 ## Week 49: December 5th-December 11th
 
@@ -1559,8 +1709,46 @@ signatured opens (https://github.com/ocamllabs/compiler-hacking/wiki/Things-to-w
   optimize a packet stream processor like POF or P4 using staging (maybe trying
   to use or get inspiration from strymonas).
 
+### Liang
+For this week, I have done the following things.
+
+I finished the first version of n-dimensional array in Owl, including some optimisation and the full documentation.
+
+I also wrote a tutorial on Ndarray which you can find here: https://github.com/ryanrhymes/owl/wiki/Tutorial:-N-Dimensional-Array
+
+I did some initial comparison to numpy and julia, it looks promising at the moment, and I will do more thorough evaluation next week.
+
+I also talked to kc and michel and discussed about further optimisations on owl, I will look into the directions they suggested in the following weeks.
+
+### Taka
+I send my worklogs this week;
+
+Preparing for the network performance evaluation -> Implementing an automation framework of the network performance evaluation
+
+This will be finished in several days
+Took long time to solve how to get logs of the MirageOS console (A logging scheme provided by Libvirt could not work, so I investigated and tried other logging frameworks)
+Making a slide deck to introduce my work at OCaml Labs to Hitachi Data systems guys -> 90% finished
+
+I will be able to submit the slide to you for checking next week
+I will also check what kind of checking process in Hitachi for the slide is needed.
+
+### Qi
+talked with mort about the next project/direction to work on, for now, there are two possibilities: about PIH-store, develop a model-based compression engine inside of it, so that the data could take up much less storage space, yet with tolerant divergence from their real values; another one is about developing some temporal logic(together with buffer management) to extend the expressibility of packet capturing of network traffic
+
+talked with Magnus about work within MirageOS tcp/ip stack testing, at the moment there are testing about different parts of a protocol (say for TCP, we have tests for options and window management), Magnus is working on more different vnetif backends (to simulate different network traffic failure modes), I think there may be something missing in between, like tests when different parts of a protocol working together as a whole under various scenarios, or a test for layers in the stack working together with different packets traces, there are some parts in test_rfc5961.ml and test_iperf.ml, but I think there should be a easier way to express these and a higher level interface to create packets and traces instead of manually created cstruct(s), I'd like to develop something like `packetdrill', probably together with a test environment and I've already started to look into this.
 
 ## Week 50: December 12th-December 18th
+
+### Liang
+I have been working on the following things.
+
+I received a lot of feedback of Owl via github and emails from different people. Based on the feedback, I decided to restructure the Owl a bit by providing a more general matrix module using GADT. I already finished the initial version of Dense.Matrix module. In the near future, it will replace the current Dense.Real and Dense.Complex to provide matrix support for more types and precisions.
+
+I met Huawei people with Jon and presented Owl and Actor (the data processing system) I developed. They showed some interests which is a good sign (maybe:)
+
+For Actor, I have been collecting papers and doing literature survey to formulate the idea.
+
+For next week, I will fly back to Helsinki so I cannot attend the meeting any more this year. I will see you guys next year in January :)
 
 ### Fred
 * Distributed witnesses, https://github.com/let-def/distwit (with @samoht )
@@ -1577,6 +1765,22 @@ signatured opens (https://github.com/ocamllabs/compiler-hacking/wiki/Things-to-w
   - About release process: too much GPR, not enough testing & code review, quality not satisfying
 * Eliom presentation (yesterday) & talk with @drup
   - Seems feasible to add eliom support to Merlin.
+
+### Taka
+I send my worklogs this week;
+
+Preparing for the network performance evaluation -> Finished automation framework implementation for the network performance evaluation.
+
+The automation script I implemented worked fine. -> Started building a MirageOS environment on another physical server @ packet.net.
+MirageOS/Solo5: mirage-dev
+OCaml version: 4.03.0, 4.04.0
+Hypervisor: Xen, KVM(virtio) -> But now having a problem in executing MirageOS with OCaml v4.03.0 on Xen, so investigating how to solve it.
+This seems a bug in MirageOS. -> Also started and finished the iperf network performance evaluation on Linux Virtual Machines.
+on the physical server above.
+Observed throughput: 38MB/s(128 bytes buffer length), 290MB/s(1024 bytes buffer length)
+Making a slide deck to introduce my work at OCaml Labs to Hitachi Data systems guys. -> No advances because I spent time in building the physical server.
+
+I will be able to finish making it in several days.
 
 ## Week 51: December 19th-December 25th
 
