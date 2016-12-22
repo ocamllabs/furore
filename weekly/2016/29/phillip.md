@@ -1,0 +1,7 @@
+Automatic perforation is coming to the point where it could be ready for more users. I have slowly started to focus on providing a good user interface.
+
+This week I ran my auto perforation tool on two sets of inputs for kmeans with the goal of showing that results from a run of the automatic perforation program can be used to approximate further inputs. That is, running kmeans with the automatic perforator gives you a result on how to best perforate your loops. Using this result with future data sets previously unseen gives you just as good results. For this experiment I trained the perforation using 10 inputs with 100,000 points. I then ran the resulting perforated program on 10 other inputs of 1,000,000 points and achieved very similar results (a 5x speedup with only a 10% loss in accuracy).
+
+This week I've written a blog post about the troubles with writing generic approximate computing frameworks (found at: http://phfilip.com/the-difficulty-in-a-general-approximate-computing-framework.html)
+
+This week I've also discussed with KC at lengths about a use-case of approximate computing. The general idea is to add approximate reasoning to programs which work over distributed key-value stores. Programs in this domain are usually already written to handle consistency anomalies. The addition of a dynamic system to track and handle the levels of approximation could be a good fit for my approximate computing work.

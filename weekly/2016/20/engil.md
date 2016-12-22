@@ -1,0 +1,1 @@
+* TLS: Halfway through the binding implementation, the configuration parsing from libtls is now working for ocaml-tls, only things left is writing and reading on sockets and the binding will be complete.
