@@ -4,17 +4,20 @@
   static msg = "Hello"
   static () = print_endline msg
   let () = print_endline "runtime!"
-  ```
+```
+
   will print "Hello" during compilation and "runtime!" when it's run.
   I only implemented this feature in the bytecode compiler as we decided
   to focus on it for now.
 
-  At that point though, sharing static and runtime values is not
-  explicitely forbidden. So the following program:
-  ```
+At that point though, sharing static and runtime values is not
+explicitely forbidden. So the following program:
+
+```
   let msg = "let-bound"
   static () = print_endline msg
 ```
+
 would make the compiler crash with a non-informative error message.
 * To address that, I split the environment into a static and a runtime part. So the above program would now be rejected with an "Unbound variable" message. That's not very informative either, but a more explicit staging error should be easy to implement later.
 * Currently, static bindings cannot refer to other modules than the one being compiled. So the program:
@@ -48,7 +51,7 @@ This very simple macro would be rejected if types weren't shared across stages. 
 
 * Finally, the use of lifted modules (i.e. modules exporting non-static values that are used in static code of another module) raises lots of questions, as there can be two versions of a module in the same code: a lifted version and a non-lifted version, as in:
 
-  ```
+```
   static module M = struct
     type t = T
     let x = T
