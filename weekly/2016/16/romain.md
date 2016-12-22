@@ -3,4 +3,4 @@
 * A beginning implementation of multipart email (I implemented Base64 and QuotedPrintable compute for encoded data)
 * Implementation of inline encoded data (compliant with the standard 2047)
 
-You can see all at: https://github.com/oklm-wsh/MrMime
+You can see all at: <https://github.com/oklm-wsh/MrMime>
