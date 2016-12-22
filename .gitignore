@@ -1,2 +1,6 @@
-output/index.html
-output/report.pdf
+.*.sw*
+output/*.epub
+output/*.html
+output/*.pdf
+weekly/weekly.md
+*.exe
