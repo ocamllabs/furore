@@ -1,6 +1,7 @@
-* Monday (2016-11-14)    
-: Specification of macro closures: the result of translating a macro into lambda
-  code should be:  
+**Monday (2016-11-14)**
+
+Specification of macro closures: the result of translating a macro into lambda
+code should be:  
   * if the target phase is 1: the code of the macro itself;  
   * if the target phase is 0: the closure, i.e. a block containing pointers to
     the cross-stage, phase-0 identifiers used in the macro's body.  
@@ -29,23 +30,27 @@
   Although this early form of CSP should be made redundant by path closures, I
   note this here for future reference.
   Improved printing of macros in signatures (`macro` instead of `static val`).
+
 * Tuesday    
-: Generation of `Lfrommacro` identifiers by macro expansion works. Now working
+  Generation of `Lfrommacro` identifiers by macro expansion works. Now working
   to make the type-checker handle `Lfrommacro` properly. Quite nicely, there is
   no need to add a constructor to the `Path.t` type, since `Path.Pdot` already
   has an integer field that can be used to represent closure fields.
   Also, the compiler now shows the results of splicing when the options
   `-dsource` or `-dparsetree` are set.
+
 * Wednesday    
-: Note: when modifying `CamlinternalQuote` it might be necessary to do `make
+  Note: when modifying `CamlinternalQuote` it might be necessary to do `make
   install` to have the changes taken into account in `Translquote`, since
   `Translquote` loads `^CamlinternalQuote` from the standard path unless
   otherwise specified.  
   First examples with path closures working. Deactivated all warnings during
   compilation of splices.  
   Nested macros now work as well.
+
 * Thursday    
-: Fix quoting of identifier so that globals are spliced as `Lglobal`. That
+
+  Fix quoting of identifier so that globals are spliced as `Lglobal`. That
   incidentally fix the issue with compound paths (see Monday).
   Fix bug with macro numbering that would trigger segfaults when mixing macros
   and the `include` keyword.
@@ -68,8 +73,9 @@
   with its position) in a macro closure, for debugging and clarity purposes. The
   drawback is that it exposes internal names that depend on the implementation
   and might confuse the user.
+
 * Friday    
-: Talked with Leo about future plans.  
+  Talked with Leo about future plans.  
   Banned quoting from outside of macros and splices. As a direct consequence,
   turned `Expr.of_*` functions into macros.
 
