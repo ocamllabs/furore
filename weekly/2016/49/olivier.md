@@ -20,6 +20,7 @@
   remarks
 
 **Examples using macros**  
+
 * I try to make a fork of camlp4 compile again, but I encountered a bug that
   wasn't caught by the tests.
 * A segfault occurs when running static code for the main source file of camlp4.
