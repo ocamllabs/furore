@@ -23,6 +23,11 @@ let name_of_uid = function
   | "phillip" -> "Philip Dexter"
   | "fred" -> "Frederic Bour"
   | "gemmag" -> "Gemma Gordon"
+  | "maxime" -> "Maxime Lesourd"
+  | "taka" -> "Takayuki Imada"
+  | "kcsrk" -> "KC Sivaramakrishnan"
+  | "dra27" -> "David Allsopp"
+  | "gabriel" -> "Gabriel de Perthuis"
   | uid -> uid
  
 let _ =
