@@ -22,6 +22,7 @@ let name_of_uid = function
   | "engil" -> "Enguerrand Decorne"
   | "phillip" -> "Philip Dexter"
   | "fred" -> "Frederic Bour"
+  | "gemmag" -> "Gemma Gordon"
   | uid -> uid
  
 let _ =
