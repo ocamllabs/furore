@@ -1,6 +1,6 @@
 November 2016
 
-## Macros (Maxime)
+## Algebraic Effects (Maxime)
 
 The initial objective of the internship was to provide a CPS translation for algebraic effects and handlers in order to compile OCaml code which uses effects to Javascript. Starting from Armael Gueneau's CPS translation we wanted to find a selective CPS translation and implement it in the js_of_ocaml toolchain.
 
