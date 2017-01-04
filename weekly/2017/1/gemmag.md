@@ -1,6 +1,3 @@
-Week 1 (Jan 2 - Jan 8)
-
-THIS WEEK
 * Catching up post-Christmas MANY EMAILS
 * Exploring using furore for weekly worklogs with a view to everyone adding their weekly logs directly
 * Paperwork and administration for visiting researchers to the lab
