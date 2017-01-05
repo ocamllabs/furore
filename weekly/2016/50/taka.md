@@ -1,0 +1,9 @@
+- Preparing for the network performance evaluation -> Finished automation framework implementation for the network performance evaluation.
+  - The automation script I implemented worked fine. -> Started building a MirageOS environment on another physical server @ packet.net.
+  - MirageOS/Solo5: mirage-dev
+  - OCaml version: 4.03.0, 4.04.0
+  - Hypervisor: Xen, KVM(virtio) -> But now having a problem in executing MirageOS with OCaml v4.03.0 on Xen, so investigating how to solve it.
+  - This seems a bug in MirageOS. -> Also started and finished the iperf network performance evaluation on Linux Virtual Machines.
+  - on the physical server above.
+  - Observed throughput: 38MB/s(128 bytes buffer length), 290MB/s(1024 bytes buffer length)
+- Making a slide deck to introduce my work at OCaml Labs to Hitachi Data systems guys. -> No advances because I spent time in building the physical server. I will be able to finish making it in several days.
