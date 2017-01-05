@@ -1,0 +1,5 @@
+*Magnus is interesting in spending a day a week contributing to the MirageOS and DataBox efforts, specifically around the work he has already done on Jitsu, ARM and networking. He will spend Wednesdays in the Lab around the standup time and work with Qi on the new Alpine xen-arm-builder distribution, to get it up to speed. He is also working on mirage-vnetif and testing of the network stack.*
+
+- before Wednesday, run the system prepared for UCN final review to make sure it works, worked out the serial output from cubie so that without a vga screen we could still have a prompt to do the work, made SD card copies
+
+- from Wednesday on, in Portugal, for the UCN final review, discovered that both the original card and the copy were corrupted because of some last second invalid writes crossing partition boundaries on the card, panicked, put up something mimicking the behaviour of PIH to make sure our partners' demos could still run, since in the schedule, we wouldn't demo anything, it's just our collaborators using our platforms, then the review seemed going well...
