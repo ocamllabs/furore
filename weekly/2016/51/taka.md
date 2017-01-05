@@ -1,19 +1,15 @@
 - Network performance evaluation
--> Finished it on MirageOS and Linux VMs.
--> Observed network throughput on MirageOS VMs is worse than on Linux VMs.
-   We will need to investigate why this happens.
-   128-byte buffer size:
-    3MB/s on MirageOS-Xen, 24MB/s on MirageOS-virtio
-   46MB/s on Linux-Xen,    38MB/s on Linux-virtio
-
-   1024-byte buffer size:
-    16MB/s on MirageOS-Xen, 38MB/s on MirageOS-virtio
-   230MB/s on Linux-Xen,   295MB/s on Linux-virtio
--> Also preparing for releasing my source codes on the Github.
+  - Finished it on MirageOS and Linux VMs.
+  - Observed network throughput on MirageOS VMs is worse than on Linux VMs. We will need to investigate why this happens.
+  - 128-byte buffer size:
+    - 3MB/s on MirageOS-Xen, 24MB/s on MirageOS-virtio
+    - 46MB/s on Linux-Xen,    38MB/s on Linux-virtio
+  - 1024-byte buffer size:
+    - 16MB/s on MirageOS-Xen, 38MB/s on MirageOS-virtio
+    - 230MB/s on Linux-Xen,   295MB/s on Linux-virtio
+- Also preparing for releasing my source codes on the Github.
    - this includes only source code sophistication for releasing, and will be finished in several days.
 
-
 - The slide deck for Hitachi Data systems guys.
--> Main sentences and figures were fixed, but I found I need to use Hitachi's own slide format.
--> I will be able to submit a final slide next week.
-   (Sorry for the inconvenience)
+  - Main sentences and figures were fixed, but I found I need to use Hitachi's own slide format.
+  - I will be able to submit a final slide next week. (Sorry for the inconvenience)
