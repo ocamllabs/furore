@@ -21,7 +21,7 @@ let name_of_uid = function
   | "ciaran" -> "Ciaran Lawlor"
   | "engil" -> "Enguerrand Decorne"
   | "phillip" -> "Philip Dexter"
-  | "fred" -> "Frederic Bour"
+  | "fred" -> "Frédéric Bour"
   | "gemmag" -> "Gemma Gordon"
   | "maxime" -> "Maxime Lesourd"
   | "taka" -> "Takayuki Imada"
