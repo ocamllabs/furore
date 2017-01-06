@@ -6,4 +6,3 @@
   - This seems a bug in MirageOS. -> Also started and finished the iperf network performance evaluation on Linux Virtual Machines.
   - on the physical server above.
   - Observed throughput: 38MB/s(128 bytes buffer length), 290MB/s(1024 bytes buffer length)
-- Making a slide deck to introduce my work at OCaml Labs to Hitachi Data systems guys. -> No advances because I spent time in building the physical server. I will be able to finish making it in several days.

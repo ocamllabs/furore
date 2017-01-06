@@ -9,7 +9,3 @@
     - 230MB/s on Linux-Xen,   295MB/s on Linux-virtio
 - Also preparing for releasing my source codes on the Github.
    - this includes only source code sophistication for releasing, and will be finished in several days.
-
-- The slide deck for Hitachi Data systems guys.
-  - Main sentences and figures were fixed, but I found I need to use Hitachi's own slide format.
-  - I will be able to submit a final slide next week. (Sorry for the inconvenience)
