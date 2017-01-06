@@ -10,8 +10,8 @@
 
 **Projects**
 - Talked with Fred re Merlin progress:  
-    - stateless frontend: working on wrapper for Windows  
-    - logging: working on currently  
-    - parsing: late Jan, needs to talk with Francois first  
+  - stateless frontend: working on wrapper for Windows  
+  - logging: working on currently  
+  - parsing: late Jan, needs to talk with Francois first  
 - Talked with Mark Shinwell (JS) about Merlin use at JS and issues they are facing  
 - Planning Romain's next project with OCL  
