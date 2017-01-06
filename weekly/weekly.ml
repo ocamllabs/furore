@@ -27,7 +27,7 @@ let name_of_uid = function
   | "taka" -> "Takayuki Imada"
   | "kcsrk" -> "KC Sivaramakrishnan"
   | "dra27" -> "David Allsopp"
-  | "gabriel" -> "Gabriel de Perthuis"
+  | "g2p" -> "Gabriel de Perthuis"
   | "qi" -> "Qi Li"
   | "liang" -> "Liang Wang"
   | uid -> uid
