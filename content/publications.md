@@ -1,5 +1,7 @@
 # Publications
 
+A comprehensive list of publications in 2016 submitted by members of the OCaml Labs group.
+
 **[Staging Generic Programming](http://conf.researchr.org/track/POPL-2016/pepm-2016-main#modal-phid_fbe1aa3933f598dafd43a3416f4b5e3f)**  
 Partial Evaluation and Program Manipulation ([PEPM](http://conf.researchr.org/track/POPL-2016/pepm-2016-main)), January 2016
 **Winner of Best Paper Award**  
@@ -38,7 +40,7 @@ _KC Sivaramakrishnan, Lukasz Ziarek and Suresh Jagannathan_
 
 **[Lock-free programming for the masses](http://kcsrk.info/papers/reagents_ocaml16.pdf0)**  
 [OCaml Workshop](https://ocaml.org/meetings/ocaml/2016/), September 2016  
-_KC Sivaramakrishnan and Théo Laurent_ 
+_KC Sivaramakrishnan and Théo Laurent_
 
 **[Effective Concurrency with Algebraic Effects](http://kcsrk.info/papers/effects_ocaml15.pdf)**  
 [OCaml Workshop](https://ocaml.org/meetings/ocaml/2016/), September 2016  
@@ -59,12 +61,3 @@ _Enguerrand Decorne, Jeremy Yallop, David Kaloper-Mersinjak_
 **[Who's got your mail? Mr. Mime!](http://din.osau.re/mrmime.pdf)**  
 [OCaml Workshop](https://ocaml.org/meetings/ocaml/2016/), September 2016  
 _Romain Calascibetta_  
-
-
-
-
-
-
-
-
-

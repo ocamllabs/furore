@@ -1,5 +1,11 @@
 # Events
 
+We regularly host community events based around functional programming and OCaml. 2016 was a busy year for us and we hosted lots of events including 4 compiler development sessions in Cambridge; the first MirageOS hackathon in Marrakech, followed by a local Cambridge MirageOS event; the 2016 OpenBSD summit; and the first International Metaprogramming Summer School at Robinson College.
+
+Together with academic appearances, members of the OCaml Labs team present their work to the wider community including programming groups, students, financial groups and other development teams - most notably Facebook this year.
+
+Encouraging community contribution and engagement has been a focus of this year, with consideration given to onboarding new users, surfacing and documenting small-scale projects, and developing strategies for efficient maintainership of our shared repositiories and code. We started the OCaml Labs Slack group to enable easy communication amongst our widely distributed group, and we have >100 active users.
+
 ## Compiler Hacking Sessions
 
 _**February, May, June and November 2016**_
@@ -296,4 +302,3 @@ _Heidi Howard_
 _**15th November 2016**_  
 [**Higher Network Performance on MirageOS**](http://talks.cam.ac.uk/talk/index/68997)  
 _Takayuki Imada \(Hitachi\)_
-

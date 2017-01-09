@@ -1,5 +1,8 @@
 # OCaml Platform
 
+The Platform combines the core OCaml compiler with a coherent set of libraries, tools and documentation. We look to large-scale users of OCaml to guide the direction of development in this area, including Jane Street, MirageOS, Docker and Facebook. 2016 has seen a focus on the developer experience; tooling improvements around packaging, build and test infrastructure; and support for different operating systems and infrastructures.
+
+
 Mention users of Platform:
 
 Unikernel Systems formed in 2016 and built on work initiated by the OCaml Labs group over the last 5 years. Unikernel Systems was successfully acquired by container giant Docker, and progress on those original components and libraries has continued throughout the year.
@@ -58,4 +61,3 @@ Windows
 * OPAM repo: migration of "own" packages, fdopen -&gt; opam-repository
 
 ARM
-
