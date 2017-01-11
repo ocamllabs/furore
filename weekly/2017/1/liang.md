@@ -1,5 +1,5 @@
 - Owl
   - Implement the module of sparse matrices.
   - Implement the module of sparse n-dimensional array.
-  - Add the unit tests for Dense.Matrix, Dense.Ndarray, Sparse.Matrix, and Sparse.Ndarray modules.
-  - Add the performance tests for aforementioned four modules.
+  - Add the unit tests for Dense.Matrix, Dense.Ndarray, Sparse.Matrix, and Sparse.Ndarray modules using Alcotest.
+  - Add the performance tests for the aforementioned four modules.
