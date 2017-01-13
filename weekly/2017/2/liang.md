@@ -1,0 +1,4 @@
+- Owl
+  - Split out Owl's interface to Eigen3 as a standalone library: https://github.com/ryanrhymes/eigen
+  - Manage to learn how to interface between OCaml and C++ template library using Ctypes.
+  - Submit Eigen OCaml library to OPAM on Friday.
