@@ -1,6 +1,3 @@
-Friday, 2017-01-06 (back from holiday)
-======================================
-
 Start working on "lambda quoting" again.
 
 Added the `CamlinternalLambda` file, contains a `lambda` type that resembles
@@ -12,9 +9,6 @@ WARNING: Unlike with `CamlinternalAST` types, we do not necessarily want
 `CamlinternalLambda`. Instead, we will rely on a trivial function to transform a
 `CamlinternalLambda.lambda` into a `Lambda.lambda`. This approach is simpler
 than the one used in `CamlinternalAST`.
-
-Week starting on Monday 2017-01-09
-==================================
 
 * Re-read Oleg's paper about BER MetaOCaml to understand scope extrusion
   detection checks.
