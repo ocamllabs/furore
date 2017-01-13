@@ -20,7 +20,7 @@ During a recent push towards the upcoming MirageOS 3.0 release, we diversified b
 
 _**11th-16th March 2016**_
 
-OCaml Labs sponsored the first MirageOS hackathon - an international, community-organised event at [Rihad Priscilla](http://queenofthemedina.com/en/index.html), Marrakech. Hannes Mehnert and David Kaloper started the [OCaml-TLS](https://mirage.io/blog/introducing-ocaml-tls) project here in Morocco back in 2014 and it provided a perfect venue for community building and hacking. Attendees included the MirageOS core team, complete newcomers and long standing community members - many of whom wrote [trip reports](https://mirage.io/blog/2016-spring-hackathon) detailing their experiences.
+OCaml Labs sponsored the first MirageOS hackathon - an international, community-organised event - at [Rihad Priscilla](http://queenofthemedina.com/en/index.html) in Marrakech, which provided a perfect venue for community building and hacking. Hannes Mehnert and David Kaloper started the [OCaml-TLS](https://mirage.io/blog/introducing-ocaml-tls) project at [Aftas beach house](https://berlin.ccc.de/~hannes/aftas2017.jpg) in [Mirleft](https://mirage.io/graphics/aftas-mirleft.jpg) back in 2014, and were keen to encourage others to experience Morocco for themselves. Hackathon attendees included the MirageOS core team, complete newcomers and long standing community members - many of whom wrote [trip reports](https://mirage.io/blog/2016-spring-hackathon) detailing their experiences.
 
 Event outputs included:
 
