@@ -30,6 +30,7 @@ let name_of_uid = function
   | "g2p" -> "Gabriel de Perthuis"
   | "qi" -> "Qi Li"
   | "liang" -> "Liang Wang"
+  | "sdolan" -> "Stephen Dolan"
   | uid -> uid
  
 let _ =
