@@ -1,0 +1,5 @@
+- Release Owl 0.2.0 to OPAM. The new release contains a lot of significant changes in the fundamental data structures in Owl. The number types and precision can be passed in as parameters in creation functions. Meanwhile, the interface remains compatible with the old `Dense.Real` and `Dense.Complex` modules, the latter two have default 64-bit precision.
+- Write a tutorial on [Basic Data Types in Owl](https://github.com/ryanrhymes/owl/wiki/Tutorial:-Basic-Data-Types)
+- Write a tutorial on [Metric Systems in Owl](https://github.com/ryanrhymes/owl/wiki/Tutorial:-Metric-Systems)
+- Ben Caterall implemented a topic modelling algorithm (SparseLDA) using Owl, the pull request has been merged. This actual application of Owl will help in refining the interface of Owl.
+- LDA code revealed a problem of Sparse module in Owl. The new implementation of Sparse module actually slows down the LDA algorithm a lot. The reason is current matrix storage format (CRS) is not ideal for random access of matrix elements (even tough it speed up many linear algebra operations), whereas my previous implementation uses a combination of hash table and CRS. This needs to be solved in future.
