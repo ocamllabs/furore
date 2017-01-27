@@ -14,23 +14,23 @@ type weekly = {
 let years = [2017;2016]
 
 let name_of_uid = function
-  | "olivier" -> "Olivier Nicole"
+  | "oliviernicole" -> "Olivier Nicole"
   | "avsm" -> "Anil Madhavapeddy"
-  | "romain" -> "Romain Calascibetta"
-  | "joel" -> "Joel Jakubovic"
-  | "ciaran" -> "Ciaran Lawlor"
+  | "dinosaure" -> "Romain Calascibetta"
+  | "jdjakub" -> "Joel Jakubovic"
+  | "ciaran16" -> "Ciaran Lawlor"
   | "engil" -> "Enguerrand Decorne"
-  | "phillip" -> "Philip Dexter"
-  | "fred" -> "Frédéric Bour"
+  | "philipdexter" -> "Philip Dexter"
+  | "let-def" -> "Frédéric Bour"
   | "gemmag" -> "Gemma Gordon"
-  | "maxime" -> "Maxime Lesourd"
-  | "taka" -> "Takayuki Imada"
-  | "kcsrk" -> "KC Sivaramakrishnan"
+  | "ilsordo" -> "Maxime Lesourd"
+  | "timada" -> "Takayuki Imada"
+  | "kayceesrk" -> "KC Sivaramakrishnan"
   | "dra27" -> "David Allsopp"
   | "g2p" -> "Gabriel de Perthuis"
-  | "qi" -> "Qi Li"
-  | "liang" -> "Liang Wang"
-  | "sdolan" -> "Stephen Dolan"
+  | "seveneng" -> "Qi Li"
+  | "ryanrhymes" -> "Liang Wang"
+  | "stedolan" -> "Stephen Dolan"
   | uid -> uid
  
 let _ =
