@@ -1,0 +1,3 @@
+  - off sick monday / tues
+  - progress on memory models! (more soon..)
+  - mpi/multicore debugging with @dhil
