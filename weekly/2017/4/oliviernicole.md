@@ -1,6 +1,7 @@
 * Diagnosis of a "problem" with generation of Parsetrees and Lambdas in
   parallel by macros.
   To quote Leo:
+
   > the best thing to do would be to start by making lambda quoting work on its
   > own without worrying about creating an AST
   > Step two would be to make the extrusion errors in terms of source variables
@@ -27,6 +28,7 @@
   > ```
   > This would give us ASTs without any renaming of variables
   > With a bit more work we could probably get renaming as well
+
 * Jeremy and Leo discovered three bugs, noted here for future reference:
   ```
   $ ocaml -dsource
