@@ -30,6 +30,7 @@
   > With a bit more work we could probably get renaming as well
 
 * Jeremy and Leo discovered three bugs, noted here for future reference:
+
   ```
   $ ocaml -dsource
   # static r = ~Pervasives.ref None;;
@@ -44,18 +45,24 @@
   # g () + 5;;
   - : int = 70275569256653
   ```
+
   `CamlinternalQuote.Exp.Local` should be used for all identifiers quoted in
   toplevel splices.
+
   ```
   module M = struct $(<<()>>) end;;
   ```
+
   results in an "index out of bounds" exception.
+
   ```
   static print x = ~Pervasives.print_endline x;;
   $(print "one"; <<()>>);;
   $(print "two"; <<()>>);;
   ```
+
   results in a segfault when put in a file and compiled with `ocamlc`.
+
 * Lambda quoting now works, including path closures but without scope extrusion
   detection. There are still a few bugs to fix in the REPL but the tests show
   that all the other functions have been preserved. It is nice to see that
