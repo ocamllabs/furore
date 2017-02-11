@@ -1,0 +1,4 @@
+- I re-implemented the forward mode of algorithmic differentiation [[code](https://github.com/ryanrhymes/owl/blob/master/lib/owl_algodiff_forward.ml)]. Now the Algodiff supports higher-order derivatives now, check [here](https://github.com/ryanrhymes/owl/wiki/Tutorial:-Algorithmic-Differentiation) please.
+- To support higher-order derivatives, Algodiff uses many recursive functions and also recursive modules. However, I was told recursive module is not a good option in OCaml due to losing the capability of compiler optimisation. I do not have a solution at the moment.
+- I overloaded some common math operators in Algodiff module. However, some matrix operations still need to be implemented.
+- I did some barrier control experiments in distributed learning. The simulator and result analysis are all done on top of Owl. The current results look good, Actor system seems more scalable than other barrier control. But I need to investigate a more into the accuracy.
