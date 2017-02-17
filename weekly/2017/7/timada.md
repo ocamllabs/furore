@@ -1,0 +1,4 @@
+- Network performance
+  - Conducted investigation to understand which part (MirageOS or the host OS) affects the waiting periods, and found out only MirageOS probably does affect them. I confirmed that network processing on the host OS does not take such long time.
+  - Started reading the source code of Solo5-ukvm to understand the current implementation of it. I found that (i) modular-based implementation in Solo5-ukvm helps me to easily add my new networking feature and (ii) the current Solo5-ukvm does not use vhost-net (= large room for performance improvement)
+  - I will continue to understand the current Solo5-ukvm architecture in more detail next week. I will also start designing my networking feature after that.
