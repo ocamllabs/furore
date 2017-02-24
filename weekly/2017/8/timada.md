@@ -1,0 +1,5 @@
+- Network performance
+  - Found that the longer waiting periods under Solo5-virtio were caused due to GC, and that they can be managed by changing the minor heap size. I will not have further investitation on the above because they are not a dominant factor of the current performance bottleneck.
+  - Completed reading the source code of Solo5-ukvm, learned how Solo5-ukvm operates in receiving and sending network packets.
+  - Also found that Solo5-ukvm can have longer waiting periods not anticipated expecially in packet sending (maybe) due to its polling mechanism.
+  - I will need to determine if I should tackle the new issue under Solo5-ukvm, and to start designing new networking archtecture for Solo5. 
