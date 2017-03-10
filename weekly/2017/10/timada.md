@@ -1,0 +1,5 @@
+- Network performance
+  - Found that the low performance under Solo5-ukvm was caused by a fault in my source code, and confirmed that the UDP iperf performance was 40MB/sec.
+  - However, the receiver side can achieve 70MB/sec. This indicates that a current bottlenec is in the sender side.
+  - Further investigation in the virtualization layer showed that the virtualization layer is a main overhead, and GC handling as shown in the previous experiments is not a performance impact.
+  - I will continue to design new networking scheme wich consideration of the current Solo5-ukvm by the end of this month.
