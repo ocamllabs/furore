@@ -1,0 +1,2 @@
+- I had been dealing with high memory consumption issue of AD module in Owl last week. In the end, the issue was identified: calling `Bigarray.Genarray.change_layout` function will cause OCaml unable to free the memory allocated for the variable.
+- `change_layout` functions have been called a lot in order to pass variables to Lacaml. Because of the aforementioned issue, I had to remove all these calls. In the end, I rewrote many maths function locally in `c` so Owl does not depend on Lacaml any longer.
