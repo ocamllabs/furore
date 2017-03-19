@@ -1,0 +1,8 @@
+- Network performance
+  - Started investigation of the current impelementation of Intel DPDK and Netmap to understand what can be a point to be considered.
+  - Findings:
+    - DPDK does packet handling in the user space whereas Netmap does it in the kernel layer
+    - DPDK uses busy loop polling for packet arrival detection whereas Netmap uses a NAPI-like scheme (=mix of busy loop polling and interrupts)
+	- Both DPDK and Netmap require a virtualized PCI device and virtualized interrupts for a virtual machine when we try to use the currently available features for virtual machines. However, Solo5-ukvm currently does not have the required functions. So they will ba a challenging point I must tackle.
+  - learned the current behavior of vhost-net in handling network packets, found that eventfd, irqfd and ioeventfd are used to realize in-kernel network packet processing in vhost-net.
+  - Started creating a pros/cons table of DPDK and Netmap to check i) how many gaps they have and ii) how large the gaps are when I try to integrate them into MirageOS.
