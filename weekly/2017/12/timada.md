@@ -1,0 +1,4 @@
+- Network performance
+  - Conducted some experiments to check how long time the MirageOS network stack spends for packet processing. Found that the IP packet frame allocation occupies 30-35% of the total processing time in MirageOS OCaml part, and that the VMExit/Entry cost cannot be negligible.
+  - I will try to reduce the former bottleneck by employing an additional upper layer on Netmap or DPDK, and the latter bottleneck by reduction of context switching.
+  - Still filling out a Pros/Cons table on network acceleration schemes.
