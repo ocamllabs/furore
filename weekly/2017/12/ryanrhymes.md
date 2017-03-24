@@ -1,0 +1,4 @@
+- The memory issue of Owl was completely addressed. Now the MNIST example only consumes about 400MB memory and GC works fine. AD module can now be used in practice.
+- The `change_layout` function was completely removed from Owl since Owl does not depend on Lacaml any longer. All the vectorised math functions were reimplemented in c last week.
+- The module structure was also significantly changed, now different number types are wrapped into corresponding modules (S, D, C, Z, Generic). This makes the API even simpler in programming.
+- I published a new release Owl 0.2.2 this Friday. The tutorials are also updated to be consistent with the new changes in Owl, also added AD stuff in readme.
