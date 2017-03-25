@@ -1,0 +1,3 @@
+- Developed a CPS translation for L := λ calculus + effect handlers.
+- Developed a CEK machine for the L.
+- Working on a type inference for L.
