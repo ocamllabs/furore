@@ -11,6 +11,15 @@ type weekly = {
   uid: string;
 }
 
+let ( ++ ) x fn =
+  match x with
+  | 0 -> fn ()
+  | r -> r
+
+let compare_weekly a b =
+  compare a.y b.y ++ fun () ->
+  compare a.w b.w
+
 let years = [2017;2016]
 
 let name_of_uid = function
@@ -63,4 +72,16 @@ let _ =
         ) ents
     done;
   ) years;
+  Fmt.pr "## Summary of activity by author\n\n";
+  (* By author *)
+  let authors = Hashtbl.create 1 in
+  List.iter (fun w -> Hashtbl.add authors w.uid w) all_weeklies;
+  let a = Hashtbl.fold (fun k v a -> if List.mem k a then a else k :: a) authors [] in
+  List.iter (fun uid ->
+    Fmt.pr "### Author %s\n\n" (name_of_uid uid);
+    List.iter (fun {uid;w;y} ->
+      Fmt.pr "#### Week %d for %s\n\n" w (name_of_uid uid);
+        OS.File.read (Fpath.v (Fmt.strf "%d/%d/%s.md" y w uid)) |> R.get_ok |> Fmt.pr "%s\n\n"
+    ) (Hashtbl.find_all authors uid |> List.sort compare_weekly)
+  ) a;
   Ok ()
