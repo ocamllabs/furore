@@ -1,0 +1,2 @@
+- made some PRs to upstream macaroons libraries
+- merged in the websocket endpoint to the service
