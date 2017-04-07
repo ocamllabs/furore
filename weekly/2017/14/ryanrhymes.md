@@ -1,0 +1,2 @@
+- I have been working on the neural network module in Owl. Currently, I am focusing on various gradient descendent and learning rate algorithms. AD turns out to be really powerful in simplifying the design of neural network module.
+- For barrier control in actor system, I am still working on the experiments. The results reported by Ben seem really promising.
