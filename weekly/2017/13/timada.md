@@ -1,0 +1,2 @@
+- Network performance
+  - No advance this week (due to a private trip)

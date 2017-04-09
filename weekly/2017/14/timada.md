@@ -1,0 +1,3 @@
+- Network performance
+  - Finished completing the Pros/Cons table, then I decided to employ Netmap rather than DPDK as a network acceleration scheme as DPDK usually requires a busy loop-based packet handling.
+  - Desingning basic implementation to integrate Netmap into Solo5-ukvm. I will introduce a vhost-net like scheme to reduce the number of VMExit/Entry.
