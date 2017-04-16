@@ -1,0 +1,3 @@
+- Network performance
+  - Learned how to write a user program with Netmap, and investigated vhost-net implementation detail.
+  - Finished designing integration of Netmap into Solo5-ukvm. Decided to employ Netmap in the host user layer to reduce the integration cost. I found that using Netmap in the host kernel layer costs a lot for lack of Netmap APIs.

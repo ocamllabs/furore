@@ -1,0 +1,3 @@
+- I updated the slicing function in Owl. It is more flexible than the previous version but can still be improved.
+- I released Owl.0.2.3. The current focus of the development is on neural network and nlp modules.
+- I did some experiments for actor system, this will continue and will be my focus in the following weeks.
