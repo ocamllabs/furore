@@ -1,0 +1,2 @@
+- I have been working on the nlp module in Owl. The nlp module aims to provide stronger supports to deal with large text corpus. With Owl's numerical functions, I hope people can build up topic model easily.
+- I have been studying latest ocaml-tensorflow binding, and other libraries for fast prototyping such as keras.io, to see what Owl can learn from them.
