@@ -1,0 +1,4 @@
+- Network performance
+  - Started implementing a new networking scheme using Netmap on Solo5-ukvm.
+  - The first phase would be replacing a network tap device by a Netmap port, and the second phase would be integration of ioeventfd to reduce the number of VMExits.
+  - Had discussion with Martin(@Docker) about the scheme above including how I can conduct the implementation.
