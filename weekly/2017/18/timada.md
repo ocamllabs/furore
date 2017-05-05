@@ -1,0 +1,3 @@
+- Implementation (Netmap on Solo5-ukvm)
+  - Confirmed that device initialization including queue allocation and finalization parts operates correctly.
+  - Finished coding sender and receiver functions. I will check if they can operate correctly the next week.
