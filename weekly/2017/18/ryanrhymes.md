@@ -1,0 +1,3 @@
+- The operators are re-designed last week with some newly added ones. The Ext module is also finished. I then released the version 0.2.4 on OPAM.
+- The work on neural network module continues, at the same time I add more functions into Owl's core.
+- I wrote two tutorials: one is on [operators and ext module](https://github.com/ryanrhymes/owl/wiki/Tutorial:-Operators-and-Ext-Module); one is on [algorithmic differentiation](https://github.com/ryanrhymes/owl/wiki/Tutorial:-Algorithmic-Differentiation).
