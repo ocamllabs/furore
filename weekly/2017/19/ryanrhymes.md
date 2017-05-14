@@ -1,0 +1,1 @@
+- I spent the whole week in studying convolution neural network stuff. I have looked into code in Tensorflow and implemented a convolution function in OCaml. I will do some comparison next week and focus on the implementation of convolution layer.
