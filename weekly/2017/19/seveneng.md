@@ -1,0 +1,3 @@
+- databox-bridge
+  - trying out a unix-based network device for mirage unikernel
+  - following the idioms from [tuntap_stabs.c](https://github.com/mirage/ocaml-tuntap/blob/master/lib/tuntap_stubs.c), instead of `open("/dev/net/tun")`, get a packet socket by `socket(PF_PACKET, SOCK_RAW, ...)`, then add housekeeping and io functions around this socket

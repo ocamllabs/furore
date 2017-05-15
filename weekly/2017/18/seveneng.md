@@ -9,4 +9,4 @@ All the existed MirageOS network io solutions may not seem to fit:
 
 So for now, looking into the possibility of a new network device for unikernels, which is on unix, and instead of openning tun/tap devices, open raw sockets and output the l2 packets
 
-Maybe could also modify the [mirage-net-unix](https://github.com/mirage/mirage-net-unix/blob/master/src/netif.ml#L58), to use `opentun` inside the `connect` function call *(tried earlier, but resulted in failures, could look further in the [c code](https://github.com/mirage/ocaml-tuntap/blob/master/lib/tuntap_stubs.c#L73))*
+Maybe could also modify the [mirage-net-unix](https://github.com/mirage/mirage-net-unix/blob/master/src/netif.ml#L58), to use <del>`opentun`</del>*(mixed opentun and opentap here, so this approach doesn't work)* inside the `connect` function call *(tried earlier, but resulted in failures, could look further in the [c code](https://github.com/mirage/ocaml-tuntap/blob/master/lib/tuntap_stubs.c#L73))*
