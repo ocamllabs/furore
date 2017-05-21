@@ -1,0 +1,3 @@
+- More types of layers have been added in neural module: convolution 2D, convolution 3D, maxpool, fully_connected, lambda layer, and etc.
+- A large part of the code in neural module was also refactored. Now, Owl is able to validate every layer in a network having consistent input and output shape when constructing a Feedforward network.
+- Algodiff module is able to support (partially though) N-dimensional array now.
