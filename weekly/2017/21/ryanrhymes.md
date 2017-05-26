@@ -1,0 +1,3 @@
+- I publish a new release for both Eigen.0.0.4 and Owl.0.2.5 on OPAM.
+- I am still focusing on the neural network module in Owl. I finished `Dropout`, `Reshape`, and `Flatten` layers this week. With these new layers, I implemented a convolutional version of the previous MNIST example which used simple Feedforward network.
+- I added a new `concatenate` function to Ndarray and Matrix module, this function is able to concatenate a list of ndarrays/matrices based on the specified axis.
