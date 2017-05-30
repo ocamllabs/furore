@@ -1,0 +1,5 @@
+- Implementation (Netmap on Solo5-ukvm)
+  - Evaluated the network throughput performance with the first Implementation. But the first implementation does not achieve good performance compared with the original Solo5-ukvm(up to 10% performance degradation).
+  - The main reason of this performance is high overhead in data queue syncing with DMA triggering on a NIC on the sender side. The first implementation does packet sending one by one depending on data write function calls from the GuestOS layer, so highly frequent write function calls can easily lead to performance degradation. This is not anticipated because data queue syncing is managed by Netmap.
+  - Additionally, I also found that softirq RX processing is always triggered when packet sending is done, and the softirq processing is heavy load. This is the specification of the current Netmap implementation. I need to reduce the number of packet sending calls as possible.
+  - However, I will move to the second implementation phase because reduction of the number of packet sending calls is planned in the second phase.
