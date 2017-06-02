@@ -1,0 +1,3 @@
+- databox-bridge
+  - started implementing a first version by plumbing through DNS for containers not on the same network
+  - adopted the idea of a forward DNS server, if couldn't resolve, forward to `127.0.0.11:<port>`

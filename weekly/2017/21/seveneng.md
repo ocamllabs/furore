@@ -1,0 +1,5 @@
+- databox-bridge
+  - investigated the DNS service within docker environment
+  - each container has a local dns server sitting at 127.0.0.11 on not standard *(53)* port
+  - the default setting for container could be changed to assign a cutomized endpoint for DNS queries
+  - looked for ways to change network gateway for containers

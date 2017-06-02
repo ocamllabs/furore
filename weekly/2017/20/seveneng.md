@@ -1,0 +1,3 @@
+- databox-bridge
+  - developped a mirage network device that could be attached to the host interface directly
+  - used packet socket in c layer, so not a compatible solution for all targets
