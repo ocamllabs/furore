@@ -1,0 +1,3 @@
+- I studied how the primitives of distributed computing are designed in Julia.
+- I implemented the experimental feature of distributed computing in Owl: for neural module and ndarray module.
+- I implemented ndarray.any module, it is an n-dimensional array module that supports any types besides numerical types.
