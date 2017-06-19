@@ -1,0 +1,3 @@
+- Implementation (Netmap on Solo5-ukvm)
+  - Designed implemented memory mapping of Netmap ring buffers so that they can be easily handled by the Guest OS layer.
+  - I found the current Netmap implementation does not allow us to reduce the maximum number of slots on a ring buffer in order to reduce the amount of memory size, though I was expecting it allows us to do so. The maximum number depends on a network device I use. Therefore, the prototype will consume larger memory space than expected.  
