@@ -1,0 +1,3 @@
+- Implementation (Netmap on Solo5-ukvm)
+  - Finished implementing the ring buffer manipulation functionality in the guest OS layer. I will start performance evaluation with it.
+  - Tried to reduce the memory size mapped from the host OS layer. It worked fine, but requires a larger number of memory regions in Linux KVM. Memory regions are a concept of physical memory slots in KVM, so we cannot use a limited number of memory regions for a VM.
