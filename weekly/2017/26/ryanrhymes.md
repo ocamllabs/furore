@@ -1,0 +1,2 @@
+- Most of the time was spent in redesigning the linear algebra module. The new module is built atop of Owl's native interface to CBLAS and LAPACKE.
+- I was enhancing Owl's core functions: most of the vectorised math functions now support complex numbers.
