@@ -1,0 +1,3 @@
+- Implementation (Netmap on Solo5-ukvm)
+  - Finished performance evaluation with Netmap buffer manipulation in the guest OS side. I confirmed it can achieve 2.0 - 3.3x throughput under 1 sender/receiver pair on a host physical server.
+  - However, its throughput under 6 sender/receiver pairs on two physical servers was similar to that with the original tap device. I found that this was mainly affected by non-Netmap processing. So I will try to identify what does affect the obtained performance.
