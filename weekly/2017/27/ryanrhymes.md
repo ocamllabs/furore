@@ -1,0 +1,3 @@
+- I have been working on Owl's dependency last week. Due to the recently added interface to CBLAS and LAPACKE, Owl relies on OpenBLAS. However, CentOS does not provide the corresponding binary format of OpenBLAS. Building from source code using conf-openblas seems tricky. Anil suggested submitting an RPM.
+- I enhanced core functions in Owl, e.g., by add a new function to generate magic square matrix.
+- Owl was posted on Hacker News. This brought in a lot of publicity so I improved the documentation a bit.
