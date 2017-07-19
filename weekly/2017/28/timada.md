@@ -1,0 +1,3 @@
+- Implementation (Netmap on Solo5-ukvm)
+  - Conducted serval experiments to understand which part of the code is delayed, and found that udp.write and netif.writev functions on the sender side were delayed.
+  - I will have further investigation on why this happens. 
