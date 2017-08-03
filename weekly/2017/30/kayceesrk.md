@@ -1,0 +1,5 @@
+- working on the multicore barriers to optimise the stop-the-world phase. Aiming to stay aligned with OCaml's current barrier model to ease upstreaming.
+- submitted end-of-year report for 1851 fellowship with Alan Mycroft's approval
+- submitted paper with Oleg about features of Eff using delimcc, and KC has one with multicore
+- discussion with Daniel Hillerstrom about ICFP tutorial for algebraic effects
+- this week: working on amd64 %r14 register usage for exception handling in multicore ocaml. Hard to measure these microbenchmarks on a macro scale, so need an opam-bench-repo for realistic use.
