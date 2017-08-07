@@ -1,0 +1,5 @@
+- Implementation (Netmap on Solo5-ukvm)
+  - Found i) that the performance degradation occurs at the Ip.allocates_frame and Cstruct.concat and ii) LLC miss mainly affected it.
+  - This LLC miss is highly related to repeated memory allocation for  new packets to be sent. It can be reduced by using pre-allocated memory region provided by Netmap
+  - But ... using the memory region does not have the backward compatibility in the IP layer, and I found it difficult to complete discussion on the compatibility and implement it by the end of my stay in Cambridge.
+  - So I will not look into further performance improvement, and will move to implementation of a MQTT broker application.
