@@ -1,0 +1,1 @@
+- I spent most of my time last week in enhancing the neural network module. The code in neural_graph module has been refactored and feedforward module will become obsoleted in the future version.
