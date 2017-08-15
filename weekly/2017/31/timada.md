@@ -1,0 +1,3 @@
+- Implementation (MQTT broker on MirageOS)
+  - Finished implementing a packets parser for 9 MQTT control packets.
+  - but need to implement packet forwarding database and a handler for it. I will do that next week.
