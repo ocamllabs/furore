@@ -1,0 +1,3 @@
+- Implementation (MQTT broker on MirageOS)
+  - Finished writing code for the packet forwarding database.
+  - I'll start functionality check for the whole application I implemented.
