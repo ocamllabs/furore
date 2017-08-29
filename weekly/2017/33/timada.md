@@ -1,0 +1,5 @@
+- Implementation (MQTT broker on MirageOS)
+  - Found a bug of higher CPU utilization (~90%) in hadling a incoming packet from MQTT publishers, and fixed it.
+  - Confirmed the MQTT broker can operate as expected. Good result.
+  - Started investigation of what kind of performance harness for MQTT brokers I can use to check the performance of the MQTT broker I implemented
+  - Decided to use Gatling + its MQTT-plugin because I can easily modify them to change a workload definition depending on a scenario. I'm now learning and checking how to use it.
