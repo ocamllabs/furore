@@ -1,0 +1,2 @@
+- Refactor neural network module using functor, the new neural network module supports both single and double precision.
+- Replace Owl's old optimisation engine with the one in neural module. 
