@@ -1,0 +1,3 @@
+- Implementation (MQTT broker on MirageOS)
+  - Finished learning how to use Gatling + its MQTT-plugin for performance harness and confirmed they can issue a bunch of MQTT client requests as I expected (10,000 publishers and 1 subscriber).
+  - Found a bug of my MQTT broker through the performance harness test. I also found out the bug is related to TCP connection close in handling MQTT disconnect requests, so I will fix it next week.
