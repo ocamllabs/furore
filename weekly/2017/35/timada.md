@@ -1,0 +1,3 @@
+- Implementation (MQTT broker on MirageOS)
+  - Have fixed a bug on TCP connection close which I found in the last week.
+  - Resumed performance evaluation of my MQTT broker.
