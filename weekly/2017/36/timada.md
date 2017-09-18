@@ -1,0 +1,4 @@
+- Implementation (MQTT broker on MirageOS)
+  - Finished performance evaluation of my MQTT broker, and found that my MQTT broker employing Netmap can handle 10,000 clients publishing 10,000 different topics with just 25% CPU utilization whereas a MQTT broker written in C (Mosquitto) indicated over 80% CPU utilization to handle the same clients.
+  - Could not saturate the maximum MQTT broker performance due to the lack of resource shortage in the client side. But I found that my MQTT broker with Netmap can handle 15,000 clients with 43% CPU utilization.
+  - I will write a report document to summarise my research work in OCaml Labs next week.
