@@ -47,3 +47,7 @@ of the pattern-matching.
 
 Finally, I put an new issue in OCaml about warnings and the PPX, see
 #MPR7624.
+
+#### type-beat
+
+I updated type-beat to use the last version of Angstrom.
