@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="github-pandoc.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#ocaml-labs">OCaml Labs</a><ul>
+<li><a href="#an-introduction">An Introduction</a><ul>
+<li><a href="#ocaml-language-and-compiler"><a href="./compiler.md">OCaml Language and Compiler</a></a></li>
+<li><a href="#ocaml-platform"><a href="./platform.md">OCaml Platform</a></a></li>
+<li><a href="#mirageos"><a href="./mirageos.md">MirageOS</a></a></li>
+<li><a href="#community-and-outreach"><a href="./community-and-outreach.md">Community and Outreach</a></a></li>
+<li><a href="#external-collaborators"><a href="./collaborations.md">External Collaborators</a></a></li>
+<li><a href="#publications"><a href="./publications.md">Publications</a></a></li>
+<li><a href="#releases">Releases</a></li>
+<li><a href="#future-work"><a href="2017-focus.md">2017: Future Work</a></a></li>
+</ul></li>
+</ul></li>
+<li><a href="#ocaml-platform-1">OCaml Platform</a><ul>
+<li><a href="#developer-experience-tooling">Developer Experience &amp; Tooling</a><ul>
+<li><a href="#opam">OPAM</a></li>
+<li><a href="#conex---opam-signing">Conex - OPAM signing</a></li>
+<li><a href="#merlin">Merlin</a></li>
+<li><a href="#packaging-and-build">Packaging and Build</a></li>
+<li><a href="#documentation">Documentation</a></li>
+</ul></li>
+<li><a href="#operating-systems-infrastructure">Operating Systems &amp; Infrastructure</a></li>
+</ul></li>
+<li><a href="#mirageos-1">MirageOS</a><ul>
+<li><a href="#core-project">Core Project</a><ul>
+<li><a href="#irmin">Irmin</a></li>
+<li><a href="#packaging-and-release">Packaging and Release</a></li>
+<li><a href="#functoria">Functoria</a></li>
+<li><a href="#ctypes-and-ffi">Ctypes and FFI</a></li>
+<li><a href="#afl">AFL</a></li>
+<li><a href="#continuous-integration">Continuous Integration</a></li>
+</ul></li>
+<li><a href="#docker-contributions">Docker Contributions</a></li>
+<li><a href="#web-services">Web services</a></li>
+<li><a href="#datascience">Datascience</a></li>
+</ul></li>
+<li><a href="#events">Events</a><ul>
+<li><a href="#compiler-hacking-sessions">Compiler Hacking Sessions</a></li>
+<li><a href="#mirageos-hackathons">MirageOS Hackathons</a><ul>
+<li><a href="#marrakech">Marrakech</a></li>
+<li><a href="#cambridge">Cambridge</a></li>
+</ul></li>
+<li><a href="#international-summer-school-for-metaprogramming">International Summer School for Metaprogramming</a></li>
+<li><a href="#openbsd-summit">OpenBSD Summit</a></li>
+<li><a href="#ocaml-labs-at-icfp">OCaml Labs at ICFP</a><ul>
+<li><a href="#ocaml-tutorial">OCaml Tutorial</a></li>
+<li><a href="#ocaml-spacetime-t-shirts">OCaml Spacetime T-shirts</a></li>
+</ul></li>
+<li><a href="#liveblogging">Liveblogging</a><ul>
+<li><a href="#icfp-and-co-located-workshops">ICFP and co-located workshops</a></li>
+<li><a href="#docker-distributed-summit">Docker Distributed Summit</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#talks-and-workshops">Talks and Workshops</a><ul>
+<li><a href="#external-talks-presentations">External Talks &amp; Presentations</a></li>
+<li><a href="#university-talks-seminars">University Talks &amp; Seminars</a></li>
+</ul></li>
+<li><a href="#publications-1">Publications</a></li>
+<li><a href="#project-goals">2017 Project Goals</a><ul>
+<li><a href="#core-language">Core Language</a></li>
+<li><a href="#platform">Platform</a></li>
+<li><a href="#mirageos-2">MirageOS</a></li>
+<li><a href="#community">Community</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="ocaml-labs">OCaml Labs</h1>
+<p><strong>Note: This is a work in progress draft document</strong></p>
+<h2 id="an-introduction">An Introduction</h2>
+<p>OCaml Labs is an initiative within the Cambridge Computer Laboratory started by Anil Madhavapeddy in 2011 to promote research, growth and collaboration within the wider OCaml community. We contribute to management of the day-to-day OCaml maintenance load, and align research agendas with real-world projects to help progress the language and make it available and applicable to a larger audience. Building on 40 years of language development, together with INRIA our goal is to freely release and integrate all work upstream, allowing all prospective users access to the efficient, expressive language of OCaml.</p>
+<p>The OCaml Labs team is a distributed group of 50+ people, comprised of researchers at the University of Cambridge Computer Laboratory, industrial partners, student interns and individual collaborators. From a combination of research grant and industrial funding we are able to fund a small full-time team at the University of Cambridge, 2-4 student interns each academic year and regular community events to encourage contribution and collaboration.</p>
+<p>This report details the work carried out by our group in 2016 and outlines prospective projects for 2017. You can see posts from previous years, in <a href="https://ocamllabs.github.io/furore/yearly.html">.html</a> and <a href="https://github.com/ocamllabs/furore/tree/master/yearly">.md format</a>.</p>
+<h3 id="ocaml-language-and-compiler"><a href="./compiler.md">OCaml Language and Compiler</a></h3>
+<h3 id="ocaml-platform"><a href="./platform.md">OCaml Platform</a></h3>
+<h3 id="mirageos"><a href="./mirageos.md">MirageOS</a></h3>
+<h3 id="community-and-outreach"><a href="./community-and-outreach.md">Community and Outreach</a></h3>
+<h3 id="external-collaborators"><a href="./collaborations.md">External Collaborators</a></h3>
+<h3 id="publications"><a href="./publications.md">Publications</a></h3>
+<h3 id="releases">Releases</h3>
+<h3 id="future-work"><a href="2017-focus.md">2017: Future Work</a></h3>
+<h1 id="ocaml-platform-1">OCaml Platform</h1>
+<p>The Platform combines the core OCaml compiler with a coherent set of libraries, tools and documentation. We look to large-scale users of OCaml to guide the direction of development in this area, including Jane Street, MirageOS, Docker and Facebook. 2016 has seen a focus on the developer experience; tooling improvements around packaging, build and test infrastructure; and support for different operating systems and infrastructures.</p>
+<p>Mention users of Platform:</p>
+<p>Unikernel Systems formed in 2016 and built on work initiated by the OCaml Labs group over the last 5 years. Unikernel Systems was successfully acquired by container giant Docker, and progress on those original components and libraries has continued throughout the year.</p>
+<p><em>Mention Jane Street, ARM, Microsoft, Citrix, Facebook, Aesthetic Integration, Hitachi</em></p>
+<p>The OCaml Platform is a collaborative effort across the OCaml community led by OCaml Labs, Jane Street and OCamlPro. The goal of the Platform is to provide an integrated development environment with a comprehensive set of tooling and support for a wide range of operating systems and infrastructures to allow for the fun and efficient development of OCaml.</p>
+<h2 id="developer-experience-tooling">Developer Experience &amp; Tooling</h2>
+<h3 id="opam">OPAM</h3>
+<p>Opam 2.0 preview release: September 2016 with details of additions - link to work with FB on Reason that led to discussions and subsequent changes</p>
+<p>Compilers as packages</p>
+<p>Command wrappers</p>
+<p>File installation tracking</p>
+<p>Migrating the OCaml repository</p>
+<p>Virtual OCaml packages</p>
+<p>Continuous Integration</p>
+<h3 id="conex---opam-signing">Conex - OPAM signing</h3>
+<h3 id="merlin">Merlin</h3>
+<p>The defacto editor tool for OCaml providing support for Emacs, Vim, VSCode, Atom, Eclipse and Sublime Text.</p>
+<h3 id="packaging-and-build">Packaging and Build</h3>
+<p>What will go here? - topkg in mirage section...</p>
+<h3 id="documentation">Documentation</h3>
+<p>Documentation has been a focus for the past few years, with direct effort made in 2016 by OCaml Labs and Jane Street to provide a working implementation for full documentation support.</p>
+<p>Work on improving the documentation toolchain started in 2015 with the <a href="http://opam.ocaml.org/blog/codoc-0-2-0-released/">alpha release</a> of <a href="https://github.com/dsheets/codoc">codoc 0.2.0</a>. The Platform team outlined the different stages of documentation and the difficulties in providing a feature-complete implementation. 2016 saw further development in the form of <a href="https://github.com/ocaml-doc/odoc">odoc</a>, an OCaml API documentation tool that takes interface files and outputs cross-referenced module documentation.</p>
+<p>The aim is that odoc will work correctly on functor-heavy code bases (where ocamldoc has previously struggled) and will link identifiers across packages. Once the rendering is improved it will replace ocamldoc as the default documentation path used by <a href="https://github.com/dbuenzli/odig">odig</a> (a library to mine installed OCaml packages).</p>
+<ul>
+<li>An example of <a href="http://docs.mirage.io/">documentation</a> generation from all of the installed packages using only <code>cmti</code> files using <code>odig ocamldoc</code></li>
+<li>A current best effort example of <a href="#documentation">documentation</a>((http://docs.mirage.io/odoc/) as a current best effort with cross referenced links.</li>
+</ul>
+<p><a href="https://github.com/ocaml-doc/odoc">Odoc</a> the documentation generator is comprised of:<br />
+<a href="https://github.com/ocaml-doc/doc-ock">doc-ock</a> to extract documentation from OCaml files; <a href="https://github.com/ocaml-doc/doc-ock-html">doc-ock-html</a> for HTML generation; <a href="https://github.com/ocaml-doc/doc-ock-xml">doc-ock-xml</a> and XML printer and parser; and <a href="https://github.com/ocaml-doc/octavius">Octavius</a> an ocamldoc syntax parser.</p>
+<h2 id="operating-systems-infrastructure">Operating Systems &amp; Infrastructure</h2>
+<p>Windows</p>
+<ul>
+<li>OPAM Windows Port</li>
+<li>OPAM repo: migration of &quot;own&quot; packages, fdopen -&gt; opam-repository</li>
+</ul>
+<p>ARM</p>
+<h1 id="mirageos-1">MirageOS</h1>
+<p><strong>Overview</strong></p>
+<p><a href="https://mirage.io">MirageOS</a> is a library operating system written in OCaml that can be used to build unikernels for secure, high-performance network applications across a variety of cloud computing and mobile platforms.</p>
+<p>MirageOS applications are highly portable since they are parameterised across their operating environment. Rather than making assumptions about the presence of an operating system, they can depend on a set of small OCaml module signatures. These signatures provide services such as consoles, network or block devices or entropy. The <code>mirage</code> CLI tool parses a configuration file that assembles concrete implementations of these signatures to generate an executable. MirageOS supports targets ranging from standard POSIX ELF binaries to x86_64/ARM Xen and KVM unikernels, and more experimental targets such as QubesOS, JavaScript and hardware FPGAs.</p>
+<p>There is a vibrant and growing ecosystem around constructing libraries for MirageOS that are built in pure OCaml with minimal external dependencies. This unlocks that functionality in all of the target architectures that MirageOS supports.</p>
+<p>MirageOS depends on a number of components that are developed and maintained by OCaml Labs, some of which are detailed below.</p>
+<p><strong>2016 Changes</strong></p>
+<p>Mirage 3.0 is set for release in early 2017 and provides the groundwork for increased flexibility and stability of unikernels in production.</p>
+<h2 id="core-project">Core Project</h2>
+<h3 id="irmin">Irmin</h3>
+<p><strong>Overview</strong></p>
+<p><a href="https://github.com/mirage/irmin">Irmin</a> provides Git-like distributed, branchable storage. It was first released in 2013, but the first <a href="https://mirage.io/blog/introducing-irmin">post</a> detailing its features was in 2014. Irmin is a library component of MirageOS and seeks to provide an OS-independent, portable structure for data persistence.</p>
+<p><strong>2016 Changes</strong></p>
+<p>2016 saw a large API change to allow easier use of new and efficient Irmin backends, increased Windows support, new functors for metadata, improved documentation and the release of <a href="https://mirage.io/blog/irmin-0.12">Irmin 0.12</a> which includes <code>irmin-watcher</code> to replace the slow and resource-intensive default polling.</p>
+<p>Previous watches on the datastore had latency issues and were expensive as they scanned the full storage directory every second to detect changes. Applications relying on Irmin such as <a href="https://github.com/docker/datakit">DataKit</a> which has thousands of tags and <a href="https://github.com/engil/Canopy">Canopy</a> which requires low latency are examples of the user-driven changes that took place this year.</p>
+<h3 id="packaging-and-release">Packaging and Release</h3>
+<p>Previous attention given to OCaml's package and release story was diverted from Assemblage to a more flexible system with a strong build-system model. The result is a combination of components that improve the process significantly, and which are used with the vast majority of our OCaml and MirageOS packages. <!--do we have evidence of this? --></p>
+<p><strong>Overview</strong></p>
+<ul>
+<li><p><a href="http://erratique.ch/software/topkg">Topkg</a> is a packager for distributing OCaml software that provides an API to describe the conventions applied to given build configurations, distribution creation and publication procedures. It is a library that is added as a build dependency and comes with an optional tool (<code>topkg-care</code>) to help manage your package and releases.</p></li>
+<li><p><a href="http://erratique.ch/software/odig">Odig</a> is a library and command line tool to mine installed OCaml packages which supports metadata lookups and package description documentation. When used together with <code>ocamldoc</code> or <code>odoc</code> it generates per-package API documentation sets with inter-package cross-references. See the OCaml <a href="./platform.md">platform</a> section for more details on documentation.</p></li>
+<li><p>Framework for building directory structures: the next piece of the package and build puzzle will focus on making it quick and easy to set up new software projects and provide licensing and source boilerplate code during program development.</p></li>
+</ul>
+<h3 id="functoria">Functoria</h3>
+<p><strong>Overview</strong></p>
+<p><a href="https://github.com/mirage/functoria">Functoria</a> is a DSL to organise functor applications. Using Functoria, you can describe a set of modules and functors, their types and their application. It uses keys to define parameters and to switch implementation at configure time.</p>
+<p><strong>2016 Changes</strong></p>
+<p>Functoria was <a href="https://mirage.io/blog/introducing-functoria">released</a> in February 2016, with a new release due in 2017.</p>
+<h3 id="ctypes-and-ffi">Ctypes and FFI</h3>
+<ul>
+<li>include libtls</li>
+</ul>
+<h3 id="afl">AFL</h3>
+<h3 id="continuous-integration">Continuous Integration</h3>
+<hr />
+<ul>
+<li>topkg, odig -- user of Platform</li>
+<li>Functoria</li>
+<li>Ctypes</li>
+<li>libtls (inverted stubs)</li>
+<li>AFL testing</li>
+</ul>
+<h2 id="docker-contributions">Docker Contributions</h2>
+<ul>
+<li>Docker for Mac and Windows - uses a variety of libraries: TCP/IP etc</li>
+<li>9p shell</li>
+<li>ANSI term parser</li>
+<li>Daniel Spencer https://github.com/danielspencer/secure_log_lib (UROP)</li>
+</ul>
+<h2 id="web-services">Web services</h2>
+<p>The web ecosystem has steadily been improving in OCaml, and OCaml Labs has made contributions towards the various protocol implementations, as well higher level frameworks to make web programming more pleasant. Most of these libraries are in pure OCaml and so directly compatible with MirageOS.</p>
+<ul>
+<li>webstack: webmachine, session, angstrom, faraday (spiros)</li>
+<li>canopy (xref to internship page)</li>
+<li>uutf, etc: all the unicode libraries, and jsonm</li>
+</ul>
+<h2 id="datascience">Datascience</h2>
+<p>Databox, UCN, personal data</p>
+<ul>
+<li>TLS</li>
+<li>Irmin</li>
+<li><p>CueKeeper</p></li>
+<li><p><strong>Mr Mime: Email Parsing</strong><br />
+<a href="https://github.com/oklm-wsh/MrMime">Repo</a> | <a href="http://din.osau.re/mrmime.pdf">Paper</a><br />
+<a href="https://github.com/oklm-wsh/MrMime">Mr Mime</a> is a pure OCaml library that targets parsing multipart email. It uses the Continuation Passing Style (CPS) to assemble small parser combinators on-the-fly to build a parser based on the mail header contents. This can be combined with MirageOS unikernels that send, receive, store and process emails. Future work may include unikernel deployments such as SMTP proxies and spam filters.</p></li>
+<li><p><strong>OWL: Data Analysis</strong><br />
+<a href="http://www.cl.cam.ac.uk/~lw525/owl/">Docs</a> | <a href="https://github.com/ryanrhymes/owl">Repo</a> | <a href="https://github.com/ryanrhymes/owl/wiki/Tutorial:-How-to-Plot-in-Owl%3F">Tutorial</a> | <em>Under development</em><br />
+<a href="https://github.com/ryanrhymes/owl">Owl</a> is an OCaml numerical library that supports both dense and sparse matrix operations, linear algebra, regressions, and many advanced mathematical and statistical functions. Owl is still in its infancy and under current development, with dense and sparse matrix functions and advance mathematical and statistical functions close to completion. <a href="https://github.com/ryanrhymes/owl/wiki/Future-Plan">Future work</a> will feature support for linear algebra, regression functions and machine learning.</p></li>
+</ul>
+<h1 id="events">Events</h1>
+<p>We regularly host community events based around functional programming and OCaml. 2016 was a busy year for us and we hosted lots of events including 4 compiler development sessions in Cambridge; the first MirageOS hackathon in Marrakech, followed by a local Cambridge MirageOS event; the 2016 OpenBSD summit; and the first International Metaprogramming Summer School at Robinson College.</p>
+<p>Together with academic appearances, members of the OCaml Labs team present their work to the wider community including programming groups, students, financial groups and other development teams - most notably Facebook this year.</p>
+<p>Encouraging community contribution and engagement has been a focus of this year, with consideration given to onboarding new users, surfacing and documenting small-scale projects, and developing strategies for efficient maintainership of our shared repositiories and code. We started the OCaml Labs Slack group to enable easy communication amongst our widely distributed group, and we have &gt;100 active users.</p>
+<h2 id="compiler-hacking-sessions">Compiler Hacking Sessions</h2>
+<p><em><strong>February, May, June and November 2016</strong></em></p>
+<p>Initiated in 2013 by Leo White and Jeremy Yallop as a time and place to focus on their compiler projects, these events have continued every few months, with 4 evening sessions over 2016. The events are open to anyone with an interest in improving the OCaml toolchain, and there's always a handful of OCaml specialists to help new users get started and answer questions. We provide a list of <a href="https://github.com/ocamllabs/compiler-hacking/wiki/Things-to-work-on">mini projects</a> for attendees to work on, and often host presentations of new releases and features.</p>
+<p>During a recent push towards the upcoming MirageOS 3.0 release, we diversified by designating our <a href="https://ocamllabs.github.io/compiler-hacking/2016/11/01/fifteenth-compiler-hacking-evening.html">most recent session</a> in November as a combination OCaml compiler/MirageOS hack evening. We followed up with an <a href="http://reynard.io/2016/11/16/CompHack.html">activity summary</a> which displayed an encouraging mix of first-ever commits, and OCaml and MirageOS specific features from a range of users. Feedback was positive, and we will likely combine some of our future hack events in similar ways.</p>
+<h2 id="mirageos-hackathons">MirageOS Hackathons</h2>
+<h3 id="marrakech">Marrakech</h3>
+<p><em><strong>11th-16th March 2016</strong></em></p>
+<p>OCaml Labs sponsored the first MirageOS hackathon - an international, community-organised event - at <a href="http://queenofthemedina.com/en/index.html">Rihad Priscilla</a> in Marrakech, which provided a perfect venue for community building and hacking. Hannes Mehnert and David Kaloper started the <a href="https://mirage.io/blog/introducing-ocaml-tls">OCaml-TLS</a> project at <a href="https://berlin.ccc.de/~hannes/aftas2017.jpg">Aftas beach house</a> in <a href="https://mirage.io/graphics/aftas-mirleft.jpg">Mirleft</a> back in 2014, and were keen to encourage others to experience Morocco for themselves. Hackathon attendees included the MirageOS core team, complete newcomers and long standing community members - many of whom wrote <a href="https://mirage.io/blog/2016-spring-hackathon">trip reports</a> detailing their experiences.</p>
+<p>Event outputs included:</p>
+<ul>
+<li>a dog-fooded network stack using DHCP on site served by <a href="https://github.com/mirage/charrua-core">Charrua</a></li>
+<li>a git-blogging unikernel called <a href="https://github.com/Engil/Canopy">Canopy</a> built on existing libraries <a href="https://github.com/mirage/irmin">Irmin</a>, <a href="http://ocsigen.org/tyxml/">tyXML</a>, <a href="https://github.com/mirage/ocaml-cow">COW</a> and <a href="https://github.com/mirage/mirage-http">Mirage HTTP</a></li>
+<li>an <a href="https://github.com/fxfactorial/an-ocaml-adoption-manifesto">OCaml adoption manifesto</a></li>
+<li>security and privacy features: specifically <a href="https://github.com/mirleft/ocaml-nocrypto/pull/93">cryptographic layer</a> improvements; key-derivation function implementations (<a href="https://github.com/abeaumont/ocaml-scrypt-kdf">Scrypt</a> and <a href="https://github.com/abeaumont/ocaml-pbkdf">PBKDF</a>); and an <a href="https://github.com/isakmp/ike">IKEv2</a> implementation</li>
+<li>networking features: <a href="https://github.com/andreas/mirage-swim">SWIM</a> membership protocol implementation; a <a href="https://github.com/hannesm/telnet">telnet</a> protocol in OCaml; <a href="https://github.com/cfcs/ocaml-socks">SOCKS4</a> packet handling; and <a href="https://github.com/cfcs/ocaml-wildcard">DNS wildcard</a> matching</li>
+<li>general MirageOS development: running <a href="http://lcamtuf.coredump.cx/afl/">AFL</a> against a MirageOS unikernel; [updates]((http://canopy.mirage.io/Posts/Errors)) of and <a href="https://github.com/verbosemode/syslogd-mirage">improvements</a> to error reporting; moving away from Camlp4 to PPX; and general documentation</li>
+</ul>
+<h3 id="cambridge">Cambridge</h3>
+<p><em><strong>17th July 2016</strong></em></p>
+<p>Following the success of the Marrakech event, we ran a day-long MirageOS hack event at Darwin College, Cambridge.</p>
+<p>Projects included:</p>
+<ul>
+<li><a href="https://mirage.io/blog/introducing-solo5">integration</a> of a new hypervisor target in the form of <a href="https://github.com/solo5/solo5">Solo5</a> KVM-based backend</li>
+<li>software packager <a href="https://github.com/dbuenzli/topkg">topkg</a>, with an API template for managing configuration and package specifications</li>
+<li>onboarding improvements and <a href="https://github.com/mirage/mirage-www/pull/468">documentation changes</a></li>
+<li>developer experience improvements</li>
+<li>CPU portability: improved ARM support via an <a href="https://gist.github.com/ijc25/612b8b7975e9461c3584b1402df2cb34">implementation</a> of Alpine Linux on Cubietrucks</li>
+<li>Windows support: <a href="https://github.com/djs55/ocaml-wpcap">OCaml</a> bindings for <a href="http://www.winpcap.org/">winpcap</a>; OPAM-Windows support for older versions of OCaml</li>
+<li>error logging improvements <a href="https://github.com/mirage/functoria/pull/55">continued from Marrakech</a></li>
+<li><a href="https://github.com/ocamllabs/ocaml-ctypes/releases/tag/0.7.0">ctypes 0.7.0</a> release</li>
+<li>a <a href="https://github.com/Chris00/ocaml-cohttp-fcgi">FastCGI connector</a> for CoHTTP</li>
+</ul>
+<h2 id="international-summer-school-for-metaprogramming">International Summer School for Metaprogramming</h2>
+<p><em><strong>8th-12th August 2016</strong></em></p>
+<p>Together with Microsoft Research and Facebook, OCaml Labs sponsored the first International Summer School for Metaprogramming which was held at Robinson College, Cambridge. The goal of the summer school was to explore the various forms of metaprogramming and its practical application. The school was aimed at graduate students of programming languages and related areas, but was open to researchers, practitioners interested in the subject.</p>
+<p>Talks and speakers included:</p>
+<ul>
+<li><a href="http://www.cl.cam.ac.uk/events/metaprog2016/everything-old-is-new-again.pdf">Quoted DLSs</a>: <a href="http://homepages.inf.ed.ac.uk/wadler/">Philip Wadler</a></li>
+<li><a href="http://homepages.inf.ed.ac.uk/slindley/nbe/nbe-cambridge2016.pdf">Normalisation by evaluation</a>: <a href="http://homepages.inf.ed.ac.uk/slindley/">Sam Lindley</a></li>
+<li><a href="https://github.com/shayan-najd/NanoFeldspar/blob/master/Examples/MetaProg2016/Slides.pdf">Embedding by normalisation</a>: <a href="http://homepages.inf.ed.ac.uk/s1364660/">Shayan Najd</a></li>
+<li>Type-safe embedding and optimising DSLs in the typed final style</li>
+<li><a href="http://chrisseaton.com/rubytruffle/metass16/metass.pdf">Self-specialising interpreters and partial evaluation</a>: <a href="http://chrisseaton.com/">Chris Seaton</a></li>
+<li>Comparing approaches to generic programming - <a href="http://www.cl.cam.ac.uk/events/metaprog2016/generic-deriving.pdf">A generic deriving mechanism of Haskell</a>; <a href="http://www.cl.cam.ac.uk/events/metaprog2016/generic-comparison.pdf">A formal comparison of approaches to datatype-generic programming</a>. <a href="http://dreixel.net/">José Pedro Magalhães</a></li>
+<li>The highs and lows of macros in the modern language: <a href="http://tratt.net/laurie/">Laurence Tratt</a></li>
+<li><a href="http://www.cl.cam.ac.uk/events/metaprog2016/psd1.pdf">Multi-stage programming Part 1</a>, <a href="http://www.cl.cam.ac.uk/events/metaprog2016/psd2.pdf">Multi-stage programming Part 2</a>: <a href="http://www.cl.cam.ac.uk/~jdy22/">Jeremy Yallop</a></li>
+<li><a href="http://www.cl.cam.ac.uk/events/metaprog2016/metaprogramming-martin-berger.pdf">Foundations of metaprogramming</a>: <a href="http://users.sussex.ac.uk/~mfb21/">Martin Berger</a></li>
+<li>A reflection on types/Template Haskell 14 years on: <a href="http://research.microsoft.com/en-us/um/people/simonpj/">Simon Peyton Jones</a></li>
+</ul>
+<p>Lightning talks from attendees:</p>
+<ul>
+<li>Mietek Bak: <a href="https://mietek.github.io/metaprog2016/html/Metaprog2016.html">Towards intentional analysis of syntax</a><br />
+</li>
+<li>Kwanghoon Choi: <a href="http://www.cl.cam.ac.uk/events/metaprog2016/kwanghoon-choi-MetaProg2016talk.pdf">SMLOG: an embedding of logic language in Standard ML</a><br />
+</li>
+<li>Artúr Poór: <a href="http://www.cl.cam.ac.uk/events/metaprog2016/parallelization-of-scala-programs.pdf">Parallelization of Scala programs by refactoring</a><br />
+</li>
+<li>Aggelos Biboudis: <a href="http://www.cl.cam.ac.uk/events/metaprog2016/stream-fusion-to-perfection.pdf">Stream Fusion to perfection</a><br />
+</li>
+<li>Martin Lester: <a href="http://www.cl.cam.ac.uk/events/metaprog2016/mml-talk-meta.pdf">Static analysis for JavaScript-Style eval</a><br />
+</li>
+<li>L. Thomas van Binsbergen: <a href="http://www.cl.cam.ac.uk/events/metaprog2016/van-binsbergen-reusable-components.pdf">Reusable components for formal and executable language specification (from the PLanCompS project)</a><br />
+</li>
+<li>Michael Ballantyne: <a href="http://www.cl.cam.ac.uk/events/metaprog2016/mpss-hygiene-presentation.pdf">Modelling macro hygiene with scope graphs</a><br />
+</li>
+<li>Paul Laforgue: <a href="http:/www.cl.cam.ac.uk/events/metaprog2016/codata-types-and-copattern-matching.pdf">Codata types and copattern matching</a></li>
+</ul>
+<h2 id="openbsd-summit">OpenBSD Summit</h2>
+<p><em><strong>30th August-5th September 2016</strong></em></p>
+<p>Improving OCaml OS and distribution support is always on our agenda, and we decided to address this directly by hosting the 2016 OpenBSD summit at the Computer Laboratory, Cambridge. It coincided with the 6.0 release and the last release to be accompanied by original songs and pressed onto CD - future releases will be online only.</p>
+<p>More needed here....</p>
+<p>It was interesting to see 60+ volunteer developer team operate, and discuss distributed community management with them.</p>
+<h2 id="ocaml-labs-at-icfp">OCaml Labs at ICFP</h2>
+<h3 id="ocaml-tutorial">OCaml Tutorial</h3>
+<p><em><strong>22nd September 2016</strong></em></p>
+<p>We ran this year's OCaml Tutorial using <a href="https://github.com/andrewray/iocaml">IOCaml Notepad</a> which provides a REPL within a browser with a friendly interface. The session lasted the afternoon and started with a brief introduction to OCaml followed by a tour through fundamental constructs needed to eventually write an implementation of the popular <a href="http://gabrielecirulli.github.io/2048/">2048 game</a>. 21 people attended the tutorial, with varying abilities and experience levels, including some Haskell developers and one person with no prior programming experience. It was an open atmosphere for questions and discussion with the resources remaining <a href="https://github.com/ocamllabs/2048-tutorial/blob/master/task.md">available online</a> . Most people managed to complete the task, and had some form of working game at the end of the tutorial, and providing a follow up tutorial for those who have completed this would be a useful next step.</p>
+<h3 id="ocaml-spacetime-t-shirts">OCaml Spacetime T-shirts</h3>
+<p><em><strong>23rd September 2016</strong></em></p>
+<p>To celebrate the upcoming OCaml 4.04.0 release, we designed and printed some OCaml t-shirts featuring the new memory profiler <a href="http://caml.inria.fr/pub/docs/manual-ocaml/spacetime.html">Spacetime</a>. We hope this is the start of many adventures for our cartoon camel.</p>
+<h2 id="liveblogging">Liveblogging</h2>
+<p>Towards the end of the summer we started using <a href="https://github.com/Engil/Canopy">Canopy</a>, the git-blogging unikernel to capture a range of talks that members of our team attended. It was a success on the whole, and we hope to continue using it for future events as a complement to videos and slides.</p>
+<h3 id="icfp-and-co-located-workshops">ICFP and co-located workshops</h3>
+<p><em><strong>18th-24th September</strong></em></p>
+<p>Knowing we would be unable to attend all of the talks, we distributed our team across the different topic tracks and ran a <a href="http://icfp2016.mirage.io/">liveblog unikernel</a> to try and cover as many talks and workshops as we could. This would also allow others to enjoy talks they could not attend. There were some wifi issues, but we managed to log 54 talks, including:</p>
+<ul>
+<li><a href="http://icfp2016.mirage.io/CUFP">9 talks</a> from the <a href="http://cufp.org/2016/">CUFP conference</a></li>
+<li><a href="http://icfp2016.mirage.io/OCaml">14 talks</a> from the <a href="http://ocaml.org/meetings/ocaml/2016/">OCaml workshop</a></li>
+<li><a href="http://icfp2016.mirage.io/HIW">1 talk</a> from the <a href="http://conf.researchr.org/track/icfp-2016/hiw-2016-papers#program">HIW workshop</a></li>
+<li><a href="http://icfp2016.mirage.io/ICFP">16 talks</a> from the <a href="http://conf.researchr.org/track/icfp-2016/icfp-2016-papers">ICFP main track</a></li>
+<li><a href="http://icfp2016.mirage.io/ML">7 talks</a> from the <a href="http://www.mlworkshop.org/ml2016">ML workshop</a></li>
+<li><a href="http://icfp2016.mirage.io/PLMW">4 talks</a> at the <a href="http://conf.researchr.org/track/icfp-2016/PLMW-ICFP-2016#program">PLMW workshop</a></li>
+<li><a href="http://icfp2016.mirage.io/TyDe">3 talks</a> at the <a href="http://conf.researchr.org/track/icfp-2016/tyde-2016-papers">TyDe workshop</a></li>
+</ul>
+<h3 id="docker-distributed-summit">Docker Distributed Summit</h3>
+<p><em><strong>7th-8th October</strong></em></p>
+<p>The Docker for Mac and Windows application utilises 40+ OCaml libraries, many of which were developed by the Unikernel Systems team stemming from OCaml Labs.</p>
+<p>We used Canopy to <a href="http://canopy.mirage.io/Liveblog">liveblog</a> the Docker Distributed Summit in Berlin and covered all of the talks, with two talks specifically related to work at OCaml Labs and MirageOS:</p>
+<ul>
+<li><p><a href="http://canopy.mirage.io/Liveblog/TUFDDS2016">Talking TUF - Securing Software Distribution</a><br />
+The Update Framework (<a href="https://theupdateframework.github.io/">TUF</a>) provides a specification and library that can be used universally to secure software update systems. Our OPAM signing proposal, <a href="https://github.com/hannesm/conex-paper/blob/master/paper.pdf">Conex</a> is based on TUF with additional features specific to <a href="https://opam.ocaml.org/blog/Signing-the-opam-repository/">OPAM</a>.</p></li>
+<li><p><a href="http://canopy.mirage.io/Liveblog/MirageOSUnikernelsDDS2016">Unikernels: The rise of the library hypervisor in MirageOS</a><br />
+This talk focused on the notion of breaking the hypervisor down into libraries and extending the &quot;kit&quot; model, whilst introducing the discrete components that form the Docker for Mac and Windows application: <a href="https://github.com/docker/hyperkit">HyperKit</a>, <a href="https://github.com/docker/datakit">DataKit</a> and <a href="https://github.com/docker/vpnkit">VPNKit</a> - all of which feature OCaml and MirageOS contributions.</p></li>
+</ul>
+<h1 id="talks-and-workshops">Talks and Workshops</h1>
+<h2 id="external-talks-presentations">External Talks &amp; Presentations</h2>
+<p><em><strong>14th January 2016</strong></em><br />
+UCL Security Group Presentation - London, UK<br />
+<strong>Unikernels: Rise of the library operating system, and how to engineer not-quite-so-broken software</strong><br />
+<em>Anil Madhavapeddy</em></p>
+<p><em><strong>22nd January 2016</strong></em><br />
+<a href="https://www.socallinuxexpo.org/scale/14x/presentations/knock-knock-unikernels-calling">CIF @ Scale14X</a> - California, USA<br />
+<a href="http://decks.openmirage.org/cif16-loops#/"><strong>Knock, knock: Unikernels Calling!</strong></a><br />
+<em>Richard Mortier</em></p>
+<p><em><strong>23rd January 2016</strong></em><br />
+<a href="http://devcycles.net/2016/winter/">/dev/winter</a> - Cambridge, UK<br />
+<a href="http://devcycles.net/2016/winter/sessions/index.php?session=70"><strong>Surfacing deep magic with library operating systems</strong></a><br />
+<em>Mindy Preston</em><br />
+<a href="http://devcycles.net/2016/winter/sessions/index.php?session=71"><strong>My first unikernel with MirageOS</strong></a><br />
+<em>Matthew Gray</em></p>
+<p><em><strong>28th January 2016</strong></em><br />
+Facebook TechTalk - California, USA<br />
+<a href="http://kcsrk.info/slides/multicore_fb16.pdf"><strong>Concurrent and Multicore OCaml: A deep dive</strong></a><br />
+<em>KC Sivaramakrishnan &amp; Stephen Dolan</em></p>
+<p><em><strong>4th February 2016</strong></em><br />
+<a href="http://www.composeconference.org/2016/program/">Compose</a> - New York, USA<br />
+<strong>Composing Network Operating Systems</strong><br />
+<em>Mindy Preston</em></p>
+<p><em><strong>19th February 2016</strong></em><br />
+MSR Seminar - Cambridge, UK<br />
+<em>Anil Madhavapeddy</em></p>
+<p><em><strong>19th February 2016</strong></em><br />
+<a href="http://bobkonf.de/2016/mehnert.html">BobKonf</a> - Berlin, Germany<br />
+<strong>Jackline: A secure instant messaging application, functional from the ground up</strong><br />
+<em>Hannes Mehnert</em></p>
+<p><em><strong>21st February 2016</strong></em><br />
+<a href="http://www.internetsociety.org/events/ndss-symposium-2016/tls-13-ready-or-not-tron-workshop-programme">TRON Workshop @ NDSS</a> - California, USA<br />
+<a href="https://www.internetsociety.org/sites/default/files/T7-mehnert.pdf"><strong>Not-quite-so-broken TLS 1.3: Mechanised Conformance Checking</strong></a><br />
+<em>Hannes Mehnert</em></p>
+<p><em><strong>14th June 2016</strong></em><br />
+<a href="http://www.meetup.com/London-Functionals/">LDN Functionals</a> - Jane Street London, UK<br />
+<a href="https://youtu.be/zqFDEDl5Zes"><strong>The functional innards of Docker for Mac and Windows</strong></a><br />
+<em>Anil Madhavapeddy</em></p>
+<p><em><strong>2nd August 2016</strong></em><br />
+<a href="http://www.meetup.com/London-Functionals/">LDN Functionals</a> - Jane Street London, UK<br />
+<a href="https://youtu.be/qRWTws_YPBA"><strong>OCaml Multicore and Programming with Reagents</strong></a><br />
+<em>KC Sivaramakrishnan</em></p>
+<p><em><strong>14th September 2016</strong></em><br />
+London Facebook Faculty Summit - Facebook London, UK<br />
+<a href="https://ocaml.io/images/1/11/Effective_Parallelism_with_Reagents.pdf"><strong>Effective parallelism with Reagents</strong></a><br />
+<em>KC Sivaramakrishnan</em></p>
+<p><em><strong>23rd September 2016</strong></em><br />
+OCaml Workshop - Nara, Japan<br />
+<strong>Improving the OCaml webstack: motivations and progress</strong><br />
+<em>Spiros Eliopoulos</em></p>
+<p><em><strong>29th September 2016</strong></em><br />
+Rustat Conference - University of Cambridge, UK<br />
+<strong>Inner workings of DataKit and DataBox</strong><br />
+<em>Anil Madhavapeddy, KC Sivaramakrishnan</em></p>
+<p><em><strong>4th November 2016</strong></em><br />
+<a href="http://www.codemesh.io/codemesh#programme">CodeMesh</a> - London, UK<br />
+<a href="http://www.codemesh.io/codemesh/heidi-howard"><strong>Distributed Consensus: Making the Impossible Possible</strong></a><br />
+<em>Heidi Howard</em></p>
+<p><em><strong>8th November 2016</strong></em><br />
+LCFS - University of Edinburgh, UK<br />
+<a href="http://www.cl.cam.ac.uk/~sd601/lfcs_slides.pdf"><strong>Polymorphism, Subtyping and Type Inference in MLsub</strong></a><br />
+<em>Stephen Dolan, Alan Mycroft</em></p>
+<p><em><strong>9th November 2016</strong></em><br />
+<a href="https://msp-strath.github.io/spls-16/">SPLS</a> - University of Edinburgh, UK<br />
+<strong>Irrelevant Classical Logic in Agda</strong><br />
+<em>Stephen Dolan</em></p>
+<p><em><strong>15th December 2016</strong></em> <a href="http://opodis2016.etsisi.upm.es/program.html">Opodis</a> - Madrid, Spain<br />
+<strong>Flexible Paxos: Quorum Intersection Revisited</strong><br />
+<em>Heidi Howard, Dahlia Malkhi and Alexander Spiegelman</em></p>
+<h2 id="university-talks-seminars">University Talks &amp; Seminars</h2>
+<p>The following presentations take place at the Cambridge Computer Laboratory during term time.</p>
+<p><em><strong>Lent Term 2016</strong></em><br />
+University of Cambridge Computer Laboratory - Cambridge, UK<br />
+<a href="https://www.cl.cam.ac.uk/teaching/1516/L28/"><strong>Advanced Functional Programming</strong></a><br />
+<em>Jeremy Yallop, Anil Madhavapeddy and guest lecturers Alan Mycroft, Leo White &amp; KC Sivaramakrishnan</em></p>
+<p><em><strong>28th January 2016</strong></em><br />
+<a href="http://talks.cam.ac.uk/talk/index/64101"><strong>An overview of Bigraphs, their applications and future research directions</strong></a><br />
+<em>Michele Sevegnani (University of Glasgow)</em></p>
+<p><em><strong>2nd February 2016</strong></em><br />
+<a href="http://talks.cam.ac.uk/talk/index/63953"><strong>Unanimous Revisited: Distributed consensus for geo-replication</strong></a><br />
+<em>Heidi Howard</em></p>
+<p><em><strong>10th February 2016</strong></em><br />
+<a href="http://talks.cam.ac.uk/talk/index/64371"><strong>Not-quite-so-broken TLS 1.3 mechanised conformance checking</strong></a><br />
+<em>Hannes Mehnert</em></p>
+<p><em><strong>16th Feburary 2016</strong></em><br />
+<a href="http://talks.cam.ac.uk/talk/index/64293"><strong>Managing Infrastructure as code with Puppet</strong></a><br />
+<em>Gareth Rushgrove (Puppet)</em></p>
+<p><em><strong>17th February 2016</strong></em><br />
+<a href="http://talks.cam.ac.uk/talk/index/64551"><strong>Compiling algebraic effects to JavaScript in js_of_ocaml</strong></a><br />
+<em>Armaël Guéneau</em></p>
+<p><em><strong>25th February 2016</strong></em><br />
+<a href="http://talks.cam.ac.uk/talk/index/63150"><strong>Is every Java program a Unikernel? An introduction to IncludeOS' design and foundations</strong></a><br />
+<em>Alfred Bratterud (HiOA)</em></p>
+<p><em><strong>17th March 2016</strong></em><br />
+<a href="http://talks.cam.ac.uk/talk/index/63075"><strong>On PCIe Performance</strong></a><br />
+<em>Rolf Neugebauer (Docker)</em></p>
+<p><em><strong>26th April 2016</strong></em><br />
+<a href="http://talks.cam.ac.uk/talk/index/66823"><strong>Towards Compilation of Affine Algebraic Effect Handlers</strong></a> <em>Daniel Hillerström (University of Ediburgh)</em></p>
+<p><em><strong>16th June 2016</strong></em><br />
+<a href="http://talks.cam.ac.uk/talk/index/66573"><strong>Ios: Why work when you can delegate?</strong></a><br />
+<em>Heidi Howard</em></p>
+<p><em><strong>12th July 2016</strong></em><br />
+<a href="http://talks.cam.ac.uk/talk/index/66835"><strong>Unikernels and Beyond: The future of application containers in the cloud</strong></a><br />
+<em>Dan Williams (IBM Research, NY)</em></p>
+<p><em><strong>19th July 2016</strong></em><br />
+<a href="http://talks.cam.ac.uk/talk/index/66823"><strong>Approximate Computing</strong></a><br />
+<em>Philip Dexter (Binghamton University)</em></p>
+<p><em><strong>11th August 2016</strong></em><br />
+<a href="http://talks.cam.ac.uk/talk/index/66948"><strong>FlashBlade: Hardware and Software Co-design</strong></a><br />
+<em>Alex Ho (Pure Storage)</em></p>
+<p><em><strong>4th October 2016</strong></em><br />
+<a href="http://www.cl.cam.ac.uk/~jac22/talks/"><strong>Second Chances: Every second packet doesn't count</strong></a><br />
+<em>Jon Crowcroft</em></p>
+<p><em><strong>11th October 2016</strong></em><br />
+<a href="http://srepls4.doc.ic.ac.uk/"><strong>Trip Report from S-REPLS 4</strong></a><br />
+<em>Nik Sultana</em></p>
+<p><em><strong>19th October 2016</strong></em><br />
+<a href="http://talks.cam.ac.uk/talk/index/68620"><strong>Unik: A platform for automating unikernel compilation and deployment</strong></a><br />
+<em>Idit Levine (EMC)</em></p>
+<p><em><strong>10th November 2016</strong></em><br />
+<a href="http://talks.cam.ac.uk/talk/index/68505"><strong>Flexible Paxos: Reaching agreement without majorities</strong></a><br />
+<em>Heidi Howard</em></p>
+<p><em><strong>15th November 2016</strong></em><br />
+<a href="http://talks.cam.ac.uk/talk/index/68997"><strong>Higher Network Performance on MirageOS</strong></a><br />
+<em>Takayuki Imada (Hitachi)</em></p>
+<p>Docker</p>
+<p>Jane Street</p>
+<p>ARM</p>
+<p>Microsoft</p>
+<p>Facebook - Reason ML</p>
+<p>Sean Grove</p>
+<p>Aesthetic Integration</p>
+<p>Citrix</p>
+<p>Hitachi</p>
+<h1 id="publications-1">Publications</h1>
+<p>A comprehensive list of publications in 2016 submitted by members of the OCaml Labs group.</p>
+<p><strong><a href="http://conf.researchr.org/track/POPL-2016/pepm-2016-main#modal-phid_fbe1aa3933f598dafd43a3416f4b5e3f">Staging Generic Programming</a></strong><br />
+Partial Evaluation and Program Manipulation (<a href="http://conf.researchr.org/track/POPL-2016/pepm-2016-main">PEPM</a>), January 2016 <strong>Winner of Best Paper Award</strong><br />
+<em>Jeremy Yallop</em></p>
+<p><strong><a href="https://www.cl.cam.ac.uk/~hm519/tron.pdf">Not-quite-so-broken TLS 1.3 mechanised conformance checking</a></strong><br />
+To be published in the <a href="http://www.internetsociety.org/events/ndss-symposium-2016/tls-13-ready-or-not-tron-workshop-programme">TRON</a> Workshop Technical Programme as part of the NDSS Symposium, February 2016<br />
+<em>David Kaloper-Mersinjak, Hannes Mehnert</em></p>
+<p><strong><a href="http://ocamllabs.github.io/ocaml-ctypes/ctypes.pdf">Declarative foreign function binding through generic programming</a></strong><br />
+To be published in the proceedings of the Thirteenth International Symposium on Functional and Logic Programming (<a href="http://www.info.kochi-tech.ac.jp/FLOPS2016/">FLOPS</a>), March 2016<br />
+<em>Jeremy Yallop, David Sheets and Anil Madhavapeddy</em></p>
+<p><strong><a href="http://kcsrk.info/papers/quelea_ieee16.pdf">Representation without Taxation: A Uniform, Low-Overhead and High-Level Interface to Eventually Consistent Key-Value Stores</a></strong><br />
+IEEE Data Engineering Bulletin, March 2016 39(1): 52-64<br />
+<em>KC Sivaramakrishnan, Gowtham Kaki and Suresh Jagannathan</em></p>
+<p><strong><a href="http://kcsrk.info/papers/schedact_jfp16.pdf">Composable Scheduler Activations for Haskell</a></strong><br />
+Journal of Functional Programming (JFP), April 2016<br />
+<em>KC Sivaramakrishnan, Tim Harris, Simon Marlow and Simon Peyton Jones</em></p>
+<p><strong><a href="https://arxiv.org/pdf/1608.06696v1.pdf">Flexible Paxos: Quorum Intersection Revisited</a></strong><br />
+<em>Heidi Howard, Dahlia Malkhi and Alexander Spiegelman</em></p>
+<p><strong><a href="http://kcsrk.info/papers/links_ocaml_ml16.pdf">Compiling Links Effect Handlers to the OCaml Backend</a></strong><br />
+<a href="http://www.mlworkshop.org/ml2016/cfp">ML Workshop</a>, September 2016<br />
+<em>Daniel Hillerström, Sam Lindley and KC Sivaramakrishnan</em></p>
+<p><strong><a href="http://kcsrk.info/papers/eff_ocaml_ml16.pdf">Eff Directly in OCaml</a></strong><br />
+<a href="http://www.mlworkshop.org/ml2016/cfp">ML Workshop</a>, September 2016<br />
+<em>Oleg Kiselyov and KC Sivaramakrishnan</em></p>
+<p><strong><a href="http://kcsrk.info/papers/mmcloud_mlw13.pdf">Migrating MultiMLton to the Cloud</a></strong><br />
+<a href="http://www.mlworkshop.org/ml2016/cfp">ML Workshop</a>, September 2016<br />
+<em>KC Sivaramakrishnan, Lukasz Ziarek and Suresh Jagannathan</em></p>
+<p><strong><a href="http://kcsrk.info/papers/reagents_ocaml16.pdf0">Lock-free programming for the masses</a></strong><br />
+<a href="https://ocaml.org/meetings/ocaml/2016/">OCaml Workshop</a>, September 2016<br />
+<em>KC Sivaramakrishnan and Théo Laurent</em></p>
+<p><strong><a href="http://kcsrk.info/papers/effects_ocaml15.pdf">Effective Concurrency with Algebraic Effects</a></strong><br />
+<a href="https://ocaml.org/meetings/ocaml/2016/">OCaml Workshop</a>, September 2016<br />
+<em>Stephen Dolan, Leo White, KC Sivaramakrishnan, Jeremy Yallop and Anil Madhavapeddy</em></p>
+<p><strong><a href="http://www.ocamlpro.com/wp-content/uploads/2016/08/2016_OUD_gesbert_madhavapeddy.pdf">The State of the OCaml Platform</a></strong><br />
+<a href="https://ocaml.org/meetings/ocaml/2016/">OCaml Workshop</a>, September 2016<br />
+<em>Louis Gesbert, Anil Madhavapeddy on behalf of the Platform team</em></p>
+<p><strong><a href="https://github.com/hannesm/conex-paper/raw/master/paper.pdf">Conex: Establishing trust into data repositories</a></strong><br />
+<a href="https://ocaml.org/meetings/ocaml/2016/">OCaml Workshop</a>, September 2016<br />
+<em>Hannes Mehnert, Louis Gesbert</em></p>
+<p><strong><a href="https://www.cl.cam.ac.uk/~jdy22/papers/ocaml-inside-a-drop-in-replacement-for-libtls.pdf">OCaml Inside: a drop-in replacement for libtls</a></strong><br />
+<a href="https://ocaml.org/meetings/ocaml/2016/">OCaml Workshop</a>, September 2016<br />
+<em>Enguerrand Decorne, Jeremy Yallop, David Kaloper-Mersinjak</em></p>
+<p><strong><a href="http://din.osau.re/mrmime.pdf">Who's got your mail? Mr. Mime!</a></strong><br />
+<a href="https://ocaml.org/meetings/ocaml/2016/">OCaml Workshop</a>, September 2016<br />
+<em>Romain Calascibetta</em></p>
+<h1 id="project-goals">2017 Project Goals</h1>
+<h2 id="core-language">Core Language</h2>
+<ul>
+<li><p>Multicore - where it's going + effects, link</p></li>
+<li><p>Modular Implicits</p></li>
+<li><p>Macros</p></li>
+</ul>
+<h2 id="platform">Platform</h2>
+<ul>
+<li>Windows Support</li>
+<li>ocamlbuild on Windows (or other options...)</li>
+<li>Windows CI: visual studio test matrix</li>
+<li>OCaml features:<br />
+-&gt; Unix ioctl<br />
+-&gt; Unix library overhaul/refactor<br />
+-&gt; GADT optional arguments<br />
+-&gt; Polymorphic module signatures?<br />
+-&gt; Build system<br />
+-&gt; ARM/ARM64 Windows Ports<br />
+-&gt; SpaceTime viewer Win32 port?</li>
+<li><p>Libraries: PiFaceCAD; ODBC</p></li>
+<li><p>Merlin</p></li>
+<li><p>Parsing and integration with Menhir. <a href="https://github.com/the-lambda-church/merlin/projects/1">Plans</a></p></li>
+<li><p>Mac OSX Support</p></li>
+<li><p>Performance profiling, Spacetime</p></li>
+</ul>
+<h2 id="mirageos-2">MirageOS</h2>
+<ul>
+<li><p>MirageOS perf (taka)</p></li>
+<li><p>MirageOS/Databox/Docker - Bushel</p></li>
+<li><p>MirageOS storage - Gabriel</p></li>
+<li><p>Git/etc Romain</p></li>
+<li><p>nicolas internship</p></li>
+<li><p>cloud infrastructure from Microsoft, hardware from ARM</p></li>
+<li><p>matt harrison - personal data silos</p></li>
+</ul>
+<h2 id="community">Community</h2>
+<ul>
+<li><p>repo maintainership/management</p></li>
+<li><p>rwo</p></li>
+<li><p>teaching</p></li>
+<li><p>internship/outreachy programs</p></li>
+<li><p>ocaml.org</p></li>
+<li><p>more events: compiler hacking (feb), mirageos marrakech (march), databox open source (march)</p></li>
+</ul>
+<p>Mention funding - grants, epsrc, at end - acknowledgements</p>
+<p>List of contributors</p>
+</body>
+</html>
